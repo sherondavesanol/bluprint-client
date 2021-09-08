@@ -1,0 +1,214 @@
+@media only screen and (min-width: 768px) {
+
+    nav {
+
+        .box {
+            padding: 0 2rem !important;
+        };
+    };
+
+    header {
+        margin: 0 3.5rem !important;
+        padding: 3rem 0 !important;
+        overflow: initial;
+
+        .hero-image {
+
+            .circle {
+                width: calc(100% + 3rem);
+                height: calc(100% + 6rem);
+                top: -3rem;
+                right: -3.5rem;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 0;
+                position: absolute;
+                background-color: $secondary;
+                z-index: -1;
+            };
+
+            img {
+                height: 13.5rem;
+                right: -2.5rem;
+            }
+        };
+
+        .hero-text {
+            margin: 0 !important;
+            
+            h1 {
+                font-size: 3.25rem;
+            };
+
+            p {
+                font-size: 1.5rem;
+                max-width: 80%;
+            };
+        };
+    };
+};
+
+@media only screen and (min-width: 1024px) {
+    
+    nav {
+
+        .box {
+            padding: 0 3.5rem !important;
+        };
+    };
+
+    header {
+        margin: 0 5rem !important;
+        display: flex;
+
+        .row {
+
+            .hero-text {
+                align-self: center;
+    
+                h1 {
+                    font-size: 4rem;
+                };
+    
+                p {
+                    max-width: 70%;
+                };
+            };
+    
+            .hero-image {
+    
+                .circle {
+                    min-width: calc(100% + 7.5rem);
+                    min-height: calc(100vh - 4rem);
+                    right: -5rem;
+                };
+    
+                img {
+                    height: 20rem;
+                };
+            };
+        };
+    };
+};
+
+@media only screen and (min-width: 1280px) {
+
+    nav {
+
+        .box {
+            padding: 0 6rem !important;
+        };
+    };
+    
+    header {
+        margin: 0 7.5rem !important;
+
+        .row {
+            
+            .hero-text {
+
+                h1 {
+                    font-size: 5.5rem;
+                    line-height: 6rem;
+                };
+
+                p {
+                    font-size: 1.75rem;
+                    line-height: 2.25rem;
+                    max-width: 60%;
+                };
+
+                a {
+                    font-size: 1.25rem;
+                };
+            };
+
+            .hero-image {
+
+                .circle {
+                    min-width: calc(100% + 7.5rem);
+                    min-height: calc(100vh - 4rem);
+                    right: -7.5rem;
+                };
+
+                img {
+                    height: 25rem;
+                };
+            };
+        };
+    };
+};
+
+@media only screen and (min-width: 1440px) {
+
+    nav {
+
+        .box {
+            padding: 0 10rem !important;
+        };
+    };
+    
+    header {
+        margin: 0 11.5rem !important;
+
+        .row {
+
+            .hero-image {
+
+                .circle {
+                    min-width: calc(100% + 11.5rem);
+                    min-height: calc(100vh - 4rem);
+                    right: -11.5rem;
+                };
+            };
+        };
+    };
+};
+
+@media only screen and (min-width: 1920px) {
+
+    nav {
+
+        .box {
+            padding: 0 15rem !important;
+        };
+    };
+    
+    header {
+        margin: 0 16.5rem !important;
+
+        .row {
+
+            .hero-text {
+
+                h1 {
+                    font-size: 7rem;
+                    line-height: 7rem;
+                };
+
+                p {
+                    font-size: 2.25rem;
+                    line-height: 2.5rem;
+                };
+
+                a {
+                    font-size: 1.75rem;
+                    max-width: 11.5rem;
+                }
+            };
+
+            .hero-image {
+
+                .circle {
+                    min-width: calc(100% + 16.5rem);
+                    min-height: calc(100vh - 4rem);
+                    right: -16.5rem;
+                };
+
+                img {
+                    height: 30rem;
+                };
+            };
+        };
+    };
+};

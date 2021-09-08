@@ -1,0 +1,128 @@
+nav {
+    position: relative;
+    background-color: white;
+    height: 4rem;
+    box-shadow: 0 0 20px 0 rgba(#6d8dad, 0.25),
+                0 0 40px 40px rgba(#6d8dad, 0.05);
+    -webkit-box-shadow: 0 0 20px 0 rgba(#6d8dad, 0.25),
+                        0 0 40px 40px rgba(#6d8dad, 0.05);
+    z-index: 100;
+
+    .box {
+
+        .logo {
+
+            a {
+                font-family: $overpass;
+                font-size: 1.55rem;
+                color: $primary;
+            };
+        };
+
+        .menu-btn {
+            position: relative;
+            left: -1.5rem;
+            top: 0.45rem;
+
+            span {
+                position: absolute;
+                width: 0.75rem;
+                height: 3px;
+                border-radius: 10px;
+                background-color: $primary;
+                transition: 200ms ease;
+
+                &::before, &::after {
+                    position: absolute;
+                    content: "";
+                    top: 0.5rem;
+                    width: 1.5rem;
+                    height: 3px;
+                    border-radius: 10px;
+                    background-color: $primary;
+                    transition: 200ms ease;
+                };
+
+                &::after {
+                    top: 1rem;
+                    width: 1.5rem;
+                };
+            };
+
+            &__active {
+        
+                span {
+                    width: 0;
+            
+                    &::before{
+                        transform: rotate(45deg);
+                    };
+            
+                    &::after {
+                        top: 0.5rem;
+                        transform: rotate(135deg);
+                    };
+                };
+            };
+
+            .mobile-menu {
+                position: fixed;
+                top: 5rem;
+                left: -50rem;
+                height: auto;
+                width: 90vw;
+                backdrop-filter: blur(16px) saturate(180%);
+                -webkit-backdrop-filter: blur(16px) saturate(180%);
+                background-color: rgba(255, 255, 255, 0.75);
+                border-radius: 12px;
+                border: 1px solid rgba(209, 213, 219, 0.3);
+                box-shadow: 4px 24px 60px 0 rgba(#6d8dad, 0.25);
+                -webkit-box-shadow: 4px 24px 60px 0 rgba(#6d8dad, 0.25);
+                opacity: 0;
+                transition: 400ms ease-in-out;
+
+                &__active {
+                    left: 5vw;
+                    opacity: 100;
+                };
+
+                a {
+                    font-family: $helvetica;
+                    color: $primary;
+                    font-size: 1.25rem;
+                };
+            };
+        };
+
+        .nav-links {
+            margin: auto 0rem !important;
+
+            a {
+                color: $primary;
+            };
+
+            #courses {
+                border-right: 1.5px solid $primary;
+                padding-right: 3rem !important;
+
+                    .caret {
+                        padding-left: 0.25rem !important;
+                        width: 1rem;
+                        height: auto;
+                        transition: 300ms ease-in-out;
+                    };
+
+                &:hover {
+
+                    .caret {
+                        transform: rotateX(180deg);
+                    };
+                };
+            };
+
+            #register {
+                padding-left: 3rem !important;
+            }
+        };
+    };
+};

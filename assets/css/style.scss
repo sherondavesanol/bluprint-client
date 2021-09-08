@@ -1,0 +1,15 @@
+// Globals
+@import 'fonts';
+@import 'variables';
+@import 'globals';
+
+// Pages
+@import './pages/index';
+@import './pages/register';
+
+// Components
+@import './components/navbar';
+@import './components/glass';
+
+// Media Queries
+@import 'mediaquery';

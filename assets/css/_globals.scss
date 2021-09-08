@@ -1,0 +1,26 @@
+html, * {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+};
+        
+h1 {
+    font-family: $overpass;
+};
+
+a {
+    text-decoration: none;
+};
+
+.button {
+    font-family: $helvetica;
+    background-color: $primary;
+    color: white;
+    padding: 0.25rem 1rem !important;
+    border-radius: 16px;
+    border: none;
+
+    &:active {
+        background-color: $footer;
+    };
+};
