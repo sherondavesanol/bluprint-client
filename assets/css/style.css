@@ -27,12 +27,12 @@
   text-transform: uppercase;
 }
 
-.capitalize {
-  text-transform: capitalize;
+.lowercase {
+  text-transform: lowercase;
 }
 
-p:first-letter {
-  text-transform: uppercase;
+.capitalize {
+  text-transform: capitalize;
 }
 
 html, * {
@@ -63,13 +63,17 @@ a {
   background-color: #232D95;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 header {
   position: relative;
   background-color: white;
   padding: 0 1.5rem !important;
   height: calc(100vh - 4rem);
   z-index: 0;
-  overflow: hidden;
 }
 
 header .hero-image {
@@ -121,20 +125,20 @@ header .hero-text a {
   max-width: 10rem;
 }
 
-.sign-up {
+#sign-up {
   background: #DFE8FF;
 }
 
-.sign-up form {
+#sign-up form {
   width: 90vw;
   color: #1A4FD6;
 }
 
-.sign-up form .form-group {
+#sign-up form .form-group {
   font-family: "Helvetica", "Arial", sans-serif;
 }
 
-.sign-up form .form-group input {
+#sign-up form .form-group input {
   border: none;
   width: 80%;
   height: 2.5rem;
@@ -146,33 +150,448 @@ header .hero-text a {
   outline: white;
 }
 
-.sign-up form .form-group input:-webkit-autofill {
+#sign-up form .form-group input:-webkit-autofill {
   box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
   -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
   -webkit-text-fill-color: #1A4FD6;
 }
 
-.sign-up form .form-group ::-webkit-input-placeholder {
+#sign-up form .form-group ::-webkit-input-placeholder {
   color: #1A4FD6;
   opacity: 0.5;
 }
 
-.sign-up form .form-group :-ms-input-placeholder {
+#sign-up form .form-group :-ms-input-placeholder {
   color: #1A4FD6;
   opacity: 0.5;
 }
 
-.sign-up form .form-group ::-ms-input-placeholder {
+#sign-up form .form-group ::-ms-input-placeholder {
   color: #1A4FD6;
   opacity: 0.5;
 }
 
-.sign-up form .form-group ::placeholder {
+#sign-up form .form-group ::placeholder {
   color: #1A4FD6;
   opacity: 0.5;
 }
 
-.sign-up form .form-group .button {
+#sign-up form .form-group .button {
+  font-size: 1rem;
+}
+
+.login {
+  background: #DFE8FF;
+}
+
+.login form {
+  width: 90vw;
+  color: #1A4FD6;
+}
+
+.login form .form-group {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.login form .form-group input {
+  border: none;
+  width: 80%;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  word-break: break-word;
+  padding-left: 1rem !important;
+  color: #1A4FD6;
+  outline: white;
+}
+
+.login form .form-group input:-webkit-autofill {
+  box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
+  -webkit-text-fill-color: #1A4FD6;
+}
+
+.login form .form-group ::-webkit-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+.login form .form-group :-ms-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+.login form .form-group ::-ms-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+.login form .form-group ::placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+.login form .form-group .button {
+  font-size: 1rem;
+}
+
+#admin-dashboard {
+  position: relative;
+  padding: 0 1.5rem !important;
+  color: #1A4FD6;
+}
+
+#admin-dashboard h1 {
+  font-family: "Overpass", "Arial", sans-serif;
+}
+
+#admin-dashboard .box .stats {
+  height: 7.5rem;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#admin-dashboard .box .users-card {
+  background-color: #232D95;
+}
+
+#admin-dashboard .box .users-card p {
+  color: white;
+}
+
+#admin-dashboard .box .courses-card {
+  background-color: #1A4FD6;
+}
+
+#admin-dashboard .box .courses-card p {
+  color: white;
+}
+
+#admin-dashboard .box .admin-card {
+  background-color: white;
+}
+
+#admin-dashboard .box .count {
+  font-size: 5rem;
+}
+
+#admin-dashboard .box .label {
+  font-size: 2rem;
+}
+
+#admin-dashboard .admin-functions h2 {
+  font-family: "Overpass", "Arial", sans-serif;
+}
+
+#admin-dashboard .admin-functions__buttons a {
+  background-color: #1A4FD6;
+  color: white;
+  width: 47.5%;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 12px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-dashboard .admin-functions__buttons a:hover {
+  background-color: #232D95;
+}
+
+#admin-view-user {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#admin-view-user .users:hover {
+  text-decoration: underline;
+}
+
+#admin-view-user .user-details p {
+  font-size: 1.25rem;
+}
+
+#admin-view-user .user-details a {
+  color: white;
+  background-color: #1A4FD6;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 1rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-user .user-details a:hover {
+  color: white;
+  background-color: #232D95;
+}
+
+#admin-view-users {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#admin-view-users .dashboard {
+  color: #1A4FD6;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#admin-view-users .dashboard:hover {
+  text-decoration: underline;
+}
+
+#admin-view-users table {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#admin-view-users table th, #admin-view-users table td {
+  padding: 0.625rem 1rem !important;
+  border-bottom: 1px solid #DFE8FF;
+  font-size: 1rem;
+}
+
+#admin-view-users table th {
+  background-color: #1A4FD6;
+  color: white;
+}
+
+#admin-view-users table tr:hover {
+  background-color: rgba(223, 232, 255, 0.5);
+}
+
+#admin-view-users table a {
+  font-size: 0.825rem;
+  background-color: white;
+  color: #1A4FD6;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 12px;
+  border: 1px solid rgba(26, 79, 214, 0.5);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-users table a:hover {
+  color: white;
+  background-color: #1a4fd6;
+  border: 1px solid #1a4fd6;
+}
+
+#admin-create-course {
+  background: #DFE8FF;
+}
+
+#admin-create-course form {
+  width: 90vw;
+  color: #1A4FD6;
+}
+
+#admin-create-course form .form-group {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#admin-create-course form .form-group input {
+  border: none;
+  width: 80%;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  word-break: break-word;
+  padding-left: 1rem !important;
+  color: #1A4FD6;
+  outline: white;
+}
+
+#admin-create-course form .form-group input:-webkit-autofill {
+  box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
+  -webkit-text-fill-color: #1A4FD6;
+}
+
+#admin-create-course form .form-group ::-webkit-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-create-course form .form-group :-ms-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-create-course form .form-group ::-ms-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-create-course form .form-group ::placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-create-course form .form-group .button {
+  font-size: 1rem;
+}
+
+#admin-view-course {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#admin-view-course .courses {
+  color: #1A4FD6;
+}
+
+#admin-view-course .courses:hover {
+  text-decoration: underline;
+}
+
+#admin-view-course .course-details p {
+  font-size: 1.25rem;
+}
+
+#admin-view-course .course-details a {
+  color: white;
+  background-color: #1A4FD6;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 1rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-course .course-details a:hover {
+  color: white;
+  background-color: #232D95;
+}
+
+#admin-view-courses {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#admin-view-courses .create-course {
+  font-family: "Helvetica", "Arial", sans-serif;
+  background-color: #1A4FD6;
+  color: white;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 1rem;
+  border: 1px solid rgba(26, 79, 214, 0.5);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-courses .create-course:hover {
+  background-color: #232D95;
+}
+
+#admin-view-courses .dashboard {
+  color: #1A4FD6;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#admin-view-courses .dashboard:hover {
+  text-decoration: underline;
+}
+
+#admin-view-courses table {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#admin-view-courses table th, #admin-view-courses table td {
+  padding: 0.625rem 1rem !important;
+  border-bottom: 1px solid #DFE8FF;
+  font-size: 1rem;
+}
+
+#admin-view-courses table th {
+  background-color: #1A4FD6;
+  color: white;
+}
+
+#admin-view-courses table tr:hover {
+  background-color: rgba(223, 232, 255, 0.5);
+}
+
+#admin-view-courses table a {
+  font-size: 0.825rem;
+  background-color: white;
+  color: #1A4FD6;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 12px;
+  border: 1px solid rgba(26, 79, 214, 0.5);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-courses table a:hover {
+  color: white;
+  background-color: #1a4fd6;
+  border: 1px solid #1a4fd6;
+}
+
+#admin-edit-course {
+  background: #DFE8FF;
+}
+
+#admin-edit-course form {
+  width: 90vw;
+  color: #1A4FD6;
+}
+
+#admin-edit-course form .form-group {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#admin-edit-course form .form-group input, #admin-edit-course form .form-group textarea {
+  border: none;
+  width: 80%;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  word-break: break-word;
+  padding: 0 1rem !important;
+  color: #1A4FD6;
+  outline: white;
+}
+
+#admin-edit-course form .form-group input:-webkit-autofill, #admin-edit-course form .form-group textarea:-webkit-autofill {
+  box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
+  -webkit-box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.65) inset;
+  -webkit-text-fill-color: #1A4FD6;
+}
+
+#admin-edit-course form .form-group textarea {
+  padding-top: 0.5rem !important;
+  resize: none;
+  min-height: 6rem;
+  max-height: 6rem;
+}
+
+#admin-edit-course form .form-group ::-webkit-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-edit-course form .form-group :-ms-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-edit-course form .form-group ::-ms-input-placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-edit-course form .form-group ::placeholder {
+  color: #1A4FD6;
+  opacity: 0.5;
+}
+
+#admin-edit-course form .form-group .button {
   font-size: 1rem;
 }
 
@@ -253,8 +672,8 @@ nav .box .menu-btn .mobile-menu {
   box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
   -webkit-box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
   opacity: 0;
-  -webkit-transition: 400ms ease-in-out;
-  transition: 400ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 nav .box .menu-btn .mobile-menu__active {
@@ -303,7 +722,6 @@ nav .box .nav-links #register {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
   box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
   -webkit-box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
 }
@@ -343,6 +761,22 @@ nav .box .nav-links #register {
     font-size: 1.5rem;
     max-width: 80%;
   }
+  .sign-up form, .login form,
+  #admin-create-course form, #admin-edit-course form {
+    width: 60%;
+  }
+  #admin-dashboard {
+    margin: 0 3.5rem !important;
+    padding: 0 !important;
+  }
+  #admin-dashboard .box .stats {
+    width: 30%;
+  }
+  #admin-view-users, #admin-view-user,
+  #admin-view-courses, #admin-view-course {
+    margin: 0 3.5rem !important;
+    padding: 0 !important;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -374,6 +808,15 @@ nav .box .nav-links #register {
   header .row .hero-image img {
     height: 20rem;
   }
+  .sign-up form, .login form,
+  #admin-create-course form, #admin-edit-course form {
+    width: 50%;
+  }
+  #admin-dashboard, #admin-view-users,
+  #admin-view-user, #admin-view-courses,
+  #admin-view-course {
+    margin: 0 5rem !important;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
@@ -403,6 +846,15 @@ nav .box .nav-links #register {
   header .row .hero-image img {
     height: 25rem;
   }
+  .sign-up form, .login form,
+  #admin-create-course form, #admin-edit-course form {
+    width: 40%;
+  }
+  #admin-dashboard, #admin-view-users,
+  #admin-view-user, #admin-view-courses,
+  #admin-view-course {
+    margin: 0 7.5rem !important;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -416,6 +868,15 @@ nav .box .nav-links #register {
     min-width: calc(100% + 11.5rem);
     min-height: calc(100vh - 4rem);
     right: -11.5rem;
+  }
+  .sign-up form, .login form,
+  #admin-create-course form, #admin-edit-course form {
+    width: 30%;
+  }
+  #admin-dashboard, #admin-view-users,
+  #admin-view-user, #admin-view-courses,
+  #admin-view-course {
+    margin: 0 11.5rem !important;
   }
 }
 
@@ -445,6 +906,11 @@ nav .box .nav-links #register {
   }
   header .row .hero-image img {
     height: 30rem;
+  }
+  #admin-dashboard, #admin-view-users,
+  #admin-view-user, #admin-view-courses,
+  #admin-view-course {
+    margin: 0 16.5rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

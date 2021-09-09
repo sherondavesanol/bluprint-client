@@ -1,15 +1,23 @@
 // Globals
-@import 'fonts';
-@import 'variables';
-@import 'globals';
+@import './globals/fonts';
+@import './globals/variables';
+@import './globals/globals';
 
 // Pages
 @import './pages/index';
 @import './pages/register';
+@import './pages/login';
+@import './pages/admin';
+@import './pages/adminViewUser';
+@import './pages/adminViewUsers';
+@import './pages/adminCreateCourse';
+@import './pages/adminViewCourse';
+@import './pages/adminViewCourses';
+@import './pages/adminEditCourse';
 
 // Components
 @import './components/navbar';
 @import './components/glass';
 
 // Media Queries
-@import 'mediaquery';
+@import './globals/mediaquery';

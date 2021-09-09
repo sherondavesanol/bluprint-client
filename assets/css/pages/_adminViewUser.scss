@@ -1,0 +1,31 @@
+#admin-view-user {
+    color: $primary;
+    margin: 0 1.5rem !important;
+    
+    .users {
+
+        &:hover {
+            text-decoration: underline;
+        };
+    };
+
+    .user-details {
+
+        p {
+            font-size: 1.25rem;
+        };
+
+        a { 
+            color: white;
+            background-color: $primary;
+            padding: 0.25rem 0.75rem !important;
+            border-radius: 1rem;
+            transition: 200ms ease-in-out;
+    
+            &:hover {
+                color: white;
+                background-color: $footer;
+            };
+        };
+    };
+};

@@ -46,6 +46,34 @@
             };
         };
     };
+    
+    .sign-up, .login, 
+    #admin-create-course, #admin-edit-course {
+        
+        form {
+
+            width: 60%;
+        };
+    };
+
+    #admin-dashboard {
+        margin: 0 3.5rem !important;
+        padding: 0 !important;
+
+        .box {
+
+            .stats {
+                
+                width: 30%;
+            };
+        };
+    };
+
+    #admin-view-users, #admin-view-user, 
+    #admin-view-courses, #admin-view-course {
+        margin: 0 3.5rem !important;
+        padding: 0 !important;
+    };
 };
 
 @media only screen and (min-width: 1024px) {
@@ -88,6 +116,22 @@
                 };
             };
         };
+    };
+
+    .sign-up, .login, 
+    #admin-create-course, #admin-edit-course {
+
+        form {
+
+            width: 50%;
+        };
+    };
+
+    #admin-dashboard, #admin-view-users, 
+    #admin-view-user, #admin-view-courses, 
+    #admin-view-course {
+        
+        margin: 0 5rem !important;
     };
 };
 
@@ -137,6 +181,22 @@
             };
         };
     };
+
+    .sign-up, .login, 
+    #admin-create-course, #admin-edit-course {
+
+        form {
+
+            width: 40%;
+        };
+    };
+
+    #admin-dashboard, #admin-view-users, 
+    #admin-view-user, #admin-view-courses, 
+    #admin-view-course {
+        
+        margin: 0 7.5rem !important;
+    };
 };
 
 @media only screen and (min-width: 1440px) {
@@ -162,6 +222,22 @@
                 };
             };
         };
+    };
+
+    .sign-up, .login, 
+    #admin-create-course, #admin-edit-course {
+
+        form {
+
+            width: 30%;
+        };
+    };
+
+    #admin-dashboard, #admin-view-users, 
+    #admin-view-user, #admin-view-courses, 
+    #admin-view-course {
+        
+        margin: 0 11.5rem !important;
     };
 };
 
@@ -194,7 +270,7 @@
                 a {
                     font-size: 1.75rem;
                     max-width: 11.5rem;
-                }
+                };
             };
 
             .hero-image {
@@ -210,5 +286,12 @@
                 };
             };
         };
+    };
+
+    #admin-dashboard, #admin-view-users, 
+    #admin-view-user, #admin-view-courses, 
+    #admin-view-course {
+        
+        margin: 0 16.5rem !important;
     };
 };

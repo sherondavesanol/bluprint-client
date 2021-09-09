@@ -40,7 +40,7 @@ registerUser.addEventListener('submit', (e) => {
                     alert('Password must be at least 8 characters.');
                 } else {
 
-                    fetch('https://bluprint-api-sdss.herokuapp.com/api/users/check-email',
+                    fetch('http://localhost:3000/api/users/check-email',
                     {
                         method: "POST",
                         headers: {"Content-Type" : "application/json"},
@@ -51,7 +51,7 @@ registerUser.addEventListener('submit', (e) => {
                     .then(data => data.json())
                     .then(data => { if(data !== true) {
                         
-                        fetch('https://bluprint-api-sdss.herokuapp.com/api/users/register',
+                        fetch('http://localhost:3000/api/users/register',
                         {
                             method: "POST",
                             headers: {"Content-Type" : "application/json"},
@@ -64,7 +64,7 @@ registerUser.addEventListener('submit', (e) => {
                             })
                         })
                         .then(data => data.json())
-                        .then(data => data ? alert('success') : alert('fail'))
+                        .then(data => data ? window.location.replace('login.html') : alert('fail'))
 
                         } else {
                             alert('email already exists!');

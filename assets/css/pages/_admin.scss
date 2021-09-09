@@ -1,0 +1,71 @@
+#admin-dashboard {
+    position: relative;
+    padding: 0 1.5rem !important;
+    color: $primary;
+    
+    h1 {
+        font-family: $overpass;
+    };
+
+    .box {
+
+        .stats {
+            height: 7.5rem;
+            font-family: $helvetica;
+        };
+        
+        .users-card {
+            background-color: $footer;
+
+            p {
+                color: white;
+            };
+        };
+
+        .courses-card {
+            background-color: $primary;
+
+            p {
+                color: white;
+            };
+        };
+
+        .admin-card {
+            background-color: white;
+        };
+        
+        .count {
+            font-size: 5rem;
+        };
+
+        .label {
+            font-size: 2rem;
+        };
+    };
+
+    .admin-functions {
+
+        h2 {
+
+            font-family: $overpass;
+        };
+
+        &__buttons {
+
+            a {
+                
+                background-color: $primary;
+                color: white;
+                width: 47.5%;
+                height: 3rem;
+                line-height: 3rem;
+                border-radius: 12px;
+                transition: 200ms ease-in-out;
+
+                &:hover {
+                    background-color: $footer;
+                };
+            };
+        };
+    };
+};
