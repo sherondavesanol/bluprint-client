@@ -1,0 +1,36 @@
+#courses {
+    color: $primary;
+    padding: 0 1.5rem !important;
+
+    h1 {
+        font-family: $overpass;
+    };
+
+    .course-card {
+        background-color: white;
+
+        .course-img {
+            border-radius: 6px;
+        };
+
+        .course-name {
+            font-size: 1.5rem;
+        };
+
+        .course-category, .course-price {
+            font-size: 1.125rem;
+        };
+
+        a  {
+            color: white;
+            background-color: $primary;
+            padding: 0.5rem 0.75rem !important;
+            border-radius: 6px;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+                background-color: $footer;
+            };
+        };
+    };
+};

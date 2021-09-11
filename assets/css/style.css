@@ -127,6 +127,7 @@ header .hero-text a {
 
 #sign-up {
   background: #DFE8FF;
+  height: 100vh;
 }
 
 #sign-up form {
@@ -182,6 +183,7 @@ header .hero-text a {
 
 .login {
   background: #DFE8FF;
+  height: 100vh;
 }
 
 .login form {
@@ -595,6 +597,108 @@ header .hero-text a {
   font-size: 1rem;
 }
 
+#courses {
+  color: #1A4FD6;
+  padding: 0 1.5rem !important;
+}
+
+#courses h1 {
+  font-family: "Overpass", "Arial", sans-serif;
+}
+
+#courses .course-card {
+  background-color: white;
+}
+
+#courses .course-card .course-img {
+  border-radius: 6px;
+}
+
+#courses .course-card .course-name {
+  font-size: 1.5rem;
+}
+
+#courses .course-card .course-category, #courses .course-card .course-price {
+  font-size: 1.125rem;
+}
+
+#courses .course-card a {
+  color: white;
+  background-color: #1A4FD6;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 6px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#courses .course-card a:hover {
+  background-color: #232D95;
+}
+
+#user-view-cart {
+  color: #1A4FD6;
+  padding: 0 1.5rem !important;
+  font-family: "Overpass", "Arial", sans-serif;
+}
+
+#user-view-cart .cart .cart-item {
+  border-bottom: 1px solid #DFE8FF;
+}
+
+#user-view-cart .cart .cart-item .item-details .item-image {
+  display: none !important;
+}
+
+#user-view-cart .cart .cart-item .item-details .item-name {
+  font-size: 1rem;
+}
+
+#user-view-cart .cart .cart-item .item-details .item-price {
+  font-size: 1rem;
+}
+
+#user-view-cart .cart .cart-item .item-details .item-added-on {
+  color: rgba(35, 45, 149, 0.65);
+  font-size: 0.625rem;
+  font-style: italic;
+}
+
+#user-view-cart .cart .cart-item .item-details a img {
+  opacity: 0.25;
+  width: 1.75rem;
+  height: auto;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#user-view-cart .cart .cart-item .item-details a img:hover {
+  opacity: 1;
+}
+
+#user-view-cart .cart .total-price-container .back-to-courses {
+  color: #1A4FD6;
+  font-size: 0.825rem;
+}
+
+#user-view-cart .cart .total-price-container .back-to-courses:hover {
+  text-decoration: underline;
+}
+
+#user-view-cart .cart .total-price-container .total {
+  font-size: 0.825rem;
+}
+
+#user-view-cart .cart .total-price-container .total-price {
+  font-size: 1.125rem;
+}
+
+#user-view-cart .checkout-btn {
+  color: white;
+  background-color: #1A4FD6;
+  padding: 1rem 0 !important;
+  border-radius: 10px;
+}
+
 nav {
   position: relative;
   background-color: white;
@@ -663,10 +767,10 @@ nav .box .menu-btn .mobile-menu {
   top: 5rem;
   left: -50rem;
   height: auto;
-  width: 90vw;
+  width: calc(100vw - 3rem);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.65);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
@@ -677,7 +781,7 @@ nav .box .menu-btn .mobile-menu {
 }
 
 nav .box .menu-btn .mobile-menu__active {
-  left: 5vw;
+  left: 1.5rem;
   opacity: 100;
 }
 
@@ -726,6 +830,12 @@ nav .box .nav-links #register {
   -webkit-box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
 }
 
+@media only screen and (min-width: 576px) {
+  #courses .course-card {
+    width: 48%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   nav .box {
     padding: 0 2rem !important;
@@ -761,21 +871,25 @@ nav .box .nav-links #register {
     font-size: 1.5rem;
     max-width: 80%;
   }
-  .sign-up form, .login form,
+  #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
     width: 60%;
   }
-  #admin-dashboard {
+  #admin-dashboard,
+  #admin-view-users, #admin-view-user,
+  #admin-view-courses, #admin-view-course,
+  #courses {
     margin: 0 3.5rem !important;
     padding: 0 !important;
+  }
+  #user-view-cart {
+    padding: 0 3.5rem !important;
   }
   #admin-dashboard .box .stats {
     width: 30%;
   }
-  #admin-view-users, #admin-view-user,
-  #admin-view-courses, #admin-view-course {
-    margin: 0 3.5rem !important;
-    padding: 0 !important;
+  #courses .course-card {
+    width: 31%;
   }
 }
 
@@ -808,14 +922,20 @@ nav .box .nav-links #register {
   header .row .hero-image img {
     height: 20rem;
   }
-  .sign-up form, .login form,
+  #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
     width: 50%;
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-course {
+  #admin-view-course, #courses {
     margin: 0 5rem !important;
+  }
+  #user-view-cart {
+    padding: 0 5rem !important;
+  }
+  #courses .course-card {
+    width: 23%;
   }
 }
 
@@ -846,14 +966,17 @@ nav .box .nav-links #register {
   header .row .hero-image img {
     height: 25rem;
   }
-  .sign-up form, .login form,
+  #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
     width: 40%;
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-course {
+  #admin-view-course, #courses {
     margin: 0 7.5rem !important;
+  }
+  #user-view-cart {
+    padding: 0 7.5rem !important;
   }
 }
 
@@ -869,7 +992,7 @@ nav .box .nav-links #register {
     min-height: calc(100vh - 4rem);
     right: -11.5rem;
   }
-  .sign-up form, .login form,
+  #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
     width: 30%;
   }
@@ -877,6 +1000,12 @@ nav .box .nav-links #register {
   #admin-view-user, #admin-view-courses,
   #admin-view-course {
     margin: 0 11.5rem !important;
+  }
+  #user-view-cart {
+    padding: 0 11.5rem !important;
+  }
+  #courses .course-card {
+    width: 18%;
   }
 }
 
@@ -911,6 +1040,9 @@ nav .box .nav-links #register {
   #admin-view-user, #admin-view-courses,
   #admin-view-course {
     margin: 0 16.5rem !important;
+  }
+  #user-view-cart {
+    padding: 0 16.5rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

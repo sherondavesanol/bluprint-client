@@ -39,7 +39,3 @@ if (localStorage.getItem('isAdmin') === 'true') {
 
     window.location.replace('../../index.html');
 };
-
-
-{/* <a href="#" id="setAdmin" class="col-3 mx-2">Set as admin</a>
-<a href="#" class="col-3 mx-2">Remove user</a> */}

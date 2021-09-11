@@ -1,3 +1,13 @@
+@media only screen and (min-width: 576px) {
+
+    #courses {
+        
+        .course-card {
+            width: 48%;
+        };
+    };
+};
+
 @media only screen and (min-width: 768px) {
 
     nav {
@@ -47,7 +57,7 @@
         };
     };
     
-    .sign-up, .login, 
+    #sign-up, .login, 
     #admin-create-course, #admin-edit-course {
         
         form {
@@ -56,9 +66,19 @@
         };
     };
 
-    #admin-dashboard {
+    #admin-dashboard, 
+    #admin-view-users, #admin-view-user, 
+    #admin-view-courses, #admin-view-course, 
+    #courses {
         margin: 0 3.5rem !important;
         padding: 0 !important;
+    };
+
+    #user-view-cart {
+        padding: 0 3.5rem !important;
+    };
+
+    #admin-dashboard {
 
         .box {
 
@@ -69,10 +89,11 @@
         };
     };
 
-    #admin-view-users, #admin-view-user, 
-    #admin-view-courses, #admin-view-course {
-        margin: 0 3.5rem !important;
-        padding: 0 !important;
+    #courses {
+        
+        .course-card {
+            width: 31%;
+        };
     };
 };
 
@@ -118,20 +139,29 @@
         };
     };
 
-    .sign-up, .login, 
+    #sign-up, .login, 
     #admin-create-course, #admin-edit-course {
 
         form {
-
             width: 50%;
         };
     };
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses, 
-    #admin-view-course {
-        
+    #admin-view-course, #courses {
         margin: 0 5rem !important;
+    };
+
+    #user-view-cart {
+        padding: 0 5rem !important;
+    };
+    
+    #courses {
+        
+        .course-card {
+            width: 23%;
+        };
     };
 };
 
@@ -182,7 +212,7 @@
         };
     };
 
-    .sign-up, .login, 
+    #sign-up, .login, 
     #admin-create-course, #admin-edit-course {
 
         form {
@@ -193,9 +223,12 @@
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses, 
-    #admin-view-course {
-        
+    #admin-view-course, #courses {
         margin: 0 7.5rem !important;
+    };
+
+    #user-view-cart {
+        padding: 0 7.5rem !important;
     };
 };
 
@@ -224,7 +257,7 @@
         };
     };
 
-    .sign-up, .login, 
+    #sign-up, .login, 
     #admin-create-course, #admin-edit-course {
 
         form {
@@ -238,6 +271,17 @@
     #admin-view-course {
         
         margin: 0 11.5rem !important;
+    };
+
+    #user-view-cart {
+        padding: 0 11.5rem !important;
+    };
+    
+    #courses {
+        
+        .course-card {
+            width: 18%;
+        };
     };
 };
 
@@ -293,5 +337,9 @@
     #admin-view-course {
         
         margin: 0 16.5rem !important;
+    };
+
+    #user-view-cart {
+        padding: 0 16.5rem !important;
     };
 };

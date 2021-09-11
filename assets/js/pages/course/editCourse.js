@@ -26,10 +26,10 @@ fetch('http://localhost:3000/api/admin/admin-view-course',
 .then(data => data.json())
 .then(data => {
     
-    courseName.placeholder = data.name;
-    courseCategory.placeholder = data.category;
-    coursePrice.placeholder = data.price;
-    courseDescription.placeholder = data.description;
+    courseName.value = data.name;
+    courseCategory.value = data.category;
+    coursePrice.value = data.price;
+    courseDescription.value = data.description;
 });
 
 editCourse.addEventListener('submit', (e) => {

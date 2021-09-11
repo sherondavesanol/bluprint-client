@@ -1,0 +1,76 @@
+#user-view-cart {
+    color: $primary;
+    padding: 0 1.5rem !important;
+    font-family: $overpass;
+    
+    .cart {
+
+        .cart-item {
+            border-bottom: 1px solid $secondary;
+    
+            .item-details {
+
+                .item-image {
+                    display: none !important;
+                };
+
+                .item-name {
+                    font-size: 1rem;
+                };
+
+                .item-price {
+                    font-size: 1rem;
+                };
+
+                .item-added-on {
+                    color: rgba($footer, 0.65);
+                    font-size: 0.625rem;
+                    font-style: italic;
+                };
+
+                a {
+
+                    img {
+                        opacity: 0.25;
+                        width: 1.75rem;
+                        height: auto;
+                        transition: 200ms ease-in-out;
+
+                        &:hover {
+                            opacity: 1;
+                        };
+                    }
+
+                    
+                };
+            };
+        };
+
+        .total-price-container {
+
+            .back-to-courses {
+                color: $primary;
+                font-size: 0.825rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            };
+
+            .total {
+                font-size: 0.825rem;
+            };
+
+            .total-price {
+                font-size: 1.125rem;
+            };
+        };
+    };
+
+    .checkout-btn {
+        color: white;
+        background-color: $primary;
+        padding: 1rem 0 !important;
+        border-radius: 10px;
+    }
+};

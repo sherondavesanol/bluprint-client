@@ -49,7 +49,7 @@ registerUser.addEventListener('submit', (e) => {
                         })
                     })
                     .then(data => data.json())
-                    .then(data => { if(data !== true) {
+                    .then(data => { if(data === false) {
                         
                         fetch('http://localhost:3000/api/users/register',
                         {
