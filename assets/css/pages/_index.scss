@@ -51,6 +51,11 @@ header {
             border-radius: 12px;
             min-width: 8rem;
             max-width: 10rem;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+                background-color: $footer;
+            };
         };
     };
 };

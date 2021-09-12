@@ -123,6 +123,12 @@ header .hero-text a {
   border-radius: 12px;
   min-width: 8rem;
   max-width: 10rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+header .hero-text a:hover {
+  background-color: #232D95;
 }
 
 #sign-up {
@@ -287,7 +293,6 @@ header .hero-text a {
 #admin-dashboard .admin-functions__buttons a {
   background-color: #1A4FD6;
   color: white;
-  width: 47.5%;
   height: 3rem;
   line-height: 3rem;
   border-radius: 12px;
@@ -306,6 +311,20 @@ header .hero-text a {
 
 #admin-view-user .users:hover {
   text-decoration: underline;
+}
+
+#admin-view-user .user-details {
+  margin-top: 7.5rem !important;
+}
+
+#admin-view-user .user-details .profile-img {
+  position: relative;
+  top: -8rem;
+  margin-bottom: -8rem !important;
+  width: 10rem;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #DFE8FF;
 }
 
 #admin-view-user .user-details p {
@@ -535,6 +554,60 @@ header .hero-text a {
   border: 1px solid #1a4fd6;
 }
 
+#admin-view-archived-courses {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#admin-view-archived-courses .courses {
+  color: #1A4FD6;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#admin-view-archived-courses .courses:hover {
+  text-decoration: underline;
+}
+
+#admin-view-archived-courses table {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#admin-view-archived-courses table th, #admin-view-archived-courses table td {
+  padding: 0.625rem 1rem !important;
+  border-bottom: 1px solid #DFE8FF;
+  font-size: 1rem;
+}
+
+#admin-view-archived-courses table th {
+  background-color: #1A4FD6;
+  color: white;
+}
+
+#admin-view-archived-courses table tr:hover {
+  background-color: rgba(223, 232, 255, 0.5);
+}
+
+#admin-view-archived-courses table a {
+  font-size: 0.825rem;
+  background-color: white;
+  color: #1A4FD6;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 12px;
+  border: 1px solid rgba(26, 79, 214, 0.5);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-archived-courses table a:hover {
+  color: white;
+  background-color: #1a4fd6;
+  border: 1px solid #1a4fd6;
+}
+
 #admin-edit-course {
   background: #DFE8FF;
 }
@@ -597,32 +670,86 @@ header .hero-text a {
   font-size: 1rem;
 }
 
-#courses {
+#admin-view-orders {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#admin-view-orders .dashboard {
+  color: #1A4FD6;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#admin-view-orders .dashboard:hover {
+  text-decoration: underline;
+}
+
+#admin-view-orders table {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#admin-view-orders table th, #admin-view-orders table td {
+  padding: 0.625rem 1rem !important;
+  border-bottom: 1px solid #DFE8FF;
+  font-size: 1rem;
+}
+
+#admin-view-orders table th {
+  background-color: #1A4FD6;
+  color: white;
+}
+
+#admin-view-orders table tr:hover {
+  background-color: rgba(223, 232, 255, 0.5);
+}
+
+#admin-view-orders table a {
+  font-size: 0.825rem;
+  background-color: white;
+  color: #1A4FD6;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 12px;
+  border: 1px solid rgba(26, 79, 214, 0.5);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-orders table a:hover {
+  color: white;
+  background-color: #1a4fd6;
+  border: 1px solid #1a4fd6;
+}
+
+#view-courses {
   color: #1A4FD6;
   padding: 0 1.5rem !important;
 }
 
-#courses h1 {
+#view-courses h1 {
   font-family: "Overpass", "Arial", sans-serif;
 }
 
-#courses .course-card {
+#view-courses .course-card {
   background-color: white;
 }
 
-#courses .course-card .course-img {
+#view-courses .course-card .course-img {
   border-radius: 6px;
 }
 
-#courses .course-card .course-name {
+#view-courses .course-card .course-name {
   font-size: 1.5rem;
 }
 
-#courses .course-card .course-category, #courses .course-card .course-price {
+#view-courses .course-card .course-category, #view-courses .course-card .course-price {
   font-size: 1.125rem;
 }
 
-#courses .course-card a {
+#view-courses .course-card a {
   color: white;
   background-color: #1A4FD6;
   padding: 0.5rem 0.75rem !important;
@@ -631,7 +758,38 @@ header .hero-text a {
   transition: 200ms ease-in-out;
 }
 
-#courses .course-card a:hover {
+#view-courses .course-card a:hover {
+  background-color: #232D95;
+}
+
+#view-course {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#view-course .courses {
+  color: #1A4FD6;
+}
+
+#view-course .courses:hover {
+  text-decoration: underline;
+}
+
+#view-course .course-details p {
+  font-size: 1.25rem;
+}
+
+#view-course .course-details a {
+  color: white;
+  background-color: #1A4FD6;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 1rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#view-course .course-details a:hover {
+  color: white;
   background-color: #232D95;
 }
 
@@ -645,8 +803,8 @@ header .hero-text a {
   border-bottom: 1px solid #DFE8FF;
 }
 
-#user-view-cart .cart .cart-item .item-details .item-image {
-  display: none !important;
+#user-view-cart .cart .cart-item:hover {
+  background-color: rgba(223, 232, 255, 0.5);
 }
 
 #user-view-cart .cart .cart-item .item-details .item-name {
@@ -663,7 +821,12 @@ header .hero-text a {
   font-style: italic;
 }
 
-#user-view-cart .cart .cart-item .item-details a img {
+#user-view-cart .cart .cart-item .item-details button {
+  border: none;
+  background: none;
+}
+
+#user-view-cart .cart .cart-item .item-details button img {
   opacity: 0.25;
   width: 1.75rem;
   height: auto;
@@ -671,16 +834,21 @@ header .hero-text a {
   transition: 200ms ease-in-out;
 }
 
-#user-view-cart .cart .cart-item .item-details a img:hover {
+#user-view-cart .cart .cart-item .item-details button img:hover {
+  cursor: pointer;
   opacity: 1;
 }
 
-#user-view-cart .cart .total-price-container .back-to-courses {
+#user-view-cart .cart .cart-item .item-details .product-img {
+  display: none !important;
+}
+
+#user-view-cart .cart .back-to-courses {
   color: #1A4FD6;
   font-size: 0.825rem;
 }
 
-#user-view-cart .cart .total-price-container .back-to-courses:hover {
+#user-view-cart .cart .back-to-courses:hover {
   text-decoration: underline;
 }
 
@@ -696,7 +864,62 @@ header .hero-text a {
   color: white;
   background-color: #1A4FD6;
   padding: 1rem 0 !important;
+  border-radius: 6px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#user-view-cart .checkout-btn:hover {
+  cursor: pointer;
+  background-color: #232D95;
+}
+
+#view-profile {
+  color: #1A4FD6;
+  padding: 0 1.5rem !important;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#view-profile h1 {
+  font-family: "Overpass", "Arial", sans-serif;
+}
+
+#view-profile .user-details {
+  margin-top: 5rem !important;
+}
+
+#view-profile .user-details .profile-img {
+  position: relative;
+  top: -8rem;
+  margin-bottom: -8rem !important;
+  width: 10rem;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #DFE8FF;
+}
+
+#view-profile .user-details #user-name {
+  font-size: 1.5rem;
+}
+
+#view-profile .user-details #user-email, #view-profile .user-details #user-mobile {
+  color: rgba(26, 79, 214, 0.75);
+}
+
+#view-profile .user-details #user-mobile {
+  border-bottom: 1px solid #DFE8FF;
+}
+
+#view-profile .order-history .order {
+  background-color: rgba(223, 232, 255, 0.4);
+  width: 85%;
   border-radius: 10px;
+}
+
+#view-profile .order-history .order .order-detail .order-property {
+  font-family: "Overpass", "Arial", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(26, 79, 214, 0.65);
 }
 
 nav {
@@ -708,6 +931,10 @@ nav {
   z-index: 100;
 }
 
+nav .box .logo {
+  line-height: 4rem;
+}
+
 nav .box .logo a {
   font-family: "Overpass", "Arial", sans-serif;
   font-size: 1.55rem;
@@ -717,10 +944,11 @@ nav .box .logo a {
 nav .box .menu-btn {
   position: relative;
   left: -1.5rem;
-  top: 0.45rem;
+  top: 0.55rem;
 }
 
 nav .box .menu-btn span {
+  top: 12px;
   position: absolute;
   width: 0.75rem;
   height: 3px;
@@ -733,7 +961,7 @@ nav .box .menu-btn span {
 nav .box .menu-btn span::before, nav .box .menu-btn span::after {
   position: absolute;
   content: "";
-  top: 0.5rem;
+  top: 8px;
   width: 1.5rem;
   height: 3px;
   border-radius: 10px;
@@ -770,7 +998,7 @@ nav .box .menu-btn .mobile-menu {
   width: calc(100vw - 3rem);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
@@ -801,7 +1029,8 @@ nav .box .nav-links a {
 
 nav .box .nav-links #courses {
   border-right: 1.5px solid #1A4FD6;
-  padding-right: 3rem !important;
+  padding-right: 1.5rem !important;
+  margin: 0 !important;
 }
 
 nav .box .nav-links #courses .caret {
@@ -817,8 +1046,31 @@ nav .box .nav-links #courses:hover .caret {
           transform: rotateX(180deg);
 }
 
+nav .box .nav-links #session, nav .box .nav-links #view-cart,
+nav .box .nav-links #admin {
+  padding-left: 1rem !important;
+}
+
 nav .box .nav-links #register {
-  padding-left: 3rem !important;
+  font-size: 0.9rem;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: white;
+  padding: 0.5rem 0.75rem !important;
+  margin-left: 1rem !important;
+  background-color: #1A4FD6;
+  border-radius: 12px;
+  min-width: 8rem;
+  max-width: 10rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+nav .box .nav-links #register:hover {
+  background-color: #232D95;
+}
+
+nav .box .nav-links #profile {
+  padding-left: 1rem !important;
 }
 
 .glass {
@@ -831,7 +1083,7 @@ nav .box .nav-links #register {
 }
 
 @media only screen and (min-width: 576px) {
-  #courses .course-card {
+  #view-courses .course-card {
     width: 48%;
   }
 }
@@ -878,17 +1130,30 @@ nav .box .nav-links #register {
   #admin-dashboard,
   #admin-view-users, #admin-view-user,
   #admin-view-courses, #admin-view-course,
-  #courses {
+  #admin-view-archived-courses, #admin-view-orders,
+  #view-courses, #view-course,
+  #view-profile {
     margin: 0 3.5rem !important;
     padding: 0 !important;
   }
   #user-view-cart {
-    padding: 0 3.5rem !important;
+    width: 70%;
+    margin: 0 auto !important;
+  }
+  #user-view-cart .cart .back-to-courses {
+    color: #1A4FD6;
+    font-size: 1rem;
+  }
+  #user-view-cart .cart .cart-item .item-details .product-img {
+    display: initial !important;
+    height: 2.75rem;
+    width: auto;
+    opacity: 1;
   }
   #admin-dashboard .box .stats {
     width: 30%;
   }
-  #courses .course-card {
+  #view-courses .course-card {
     width: 31%;
   }
 }
@@ -928,13 +1193,18 @@ nav .box .nav-links #register {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-course, #courses {
+  #admin-view-archived-courses, #admin-view-orders,
+  #admin-view-course, #view-courses,
+  #view-course, #view-profile {
     margin: 0 5rem !important;
   }
-  #user-view-cart {
-    padding: 0 5rem !important;
+  #view-profile .user-details, #view-profile .course-details, #admin-view-user .user-details, #admin-view-user .course-details,
+  #view-course .user-details,
+  #view-course .course-details {
+    margin: 5rem auto !important;
+    width: 65%;
   }
-  #courses .course-card {
+  #view-courses .course-card {
     width: 23%;
   }
 }
@@ -972,8 +1242,16 @@ nav .box .nav-links #register {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-course, #courses {
+  #admin-view-archived-courses, #admin-view-orders,
+  #admin-view-course, #view-courses,
+  #view-course, #view-profile {
     margin: 0 7.5rem !important;
+  }
+  #view-profile .user-details, #view-profile .course-details, #admin-view-user .user-details, #admin-view-user .course-details,
+  #view-course .user-details,
+  #view-course .course-details {
+    margin: 5rem auto !important;
+    width: 50%;
   }
   #user-view-cart {
     padding: 0 7.5rem !important;
@@ -998,14 +1276,13 @@ nav .box .nav-links #register {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-course {
+  #admin-view-archived-courses, #admin-view-orders,
+  #admin-view-course, #view-courses,
+  #view-course, #view-profile {
     margin: 0 11.5rem !important;
   }
   #user-view-cart {
     padding: 0 11.5rem !important;
-  }
-  #courses .course-card {
-    width: 18%;
   }
 }
 
@@ -1038,8 +1315,16 @@ nav .box .nav-links #register {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-course {
+  #admin-view-archived-courses, #admin-view-orders,
+  #admin-view-course, #view-courses,
+  #view-course, #view-profile {
     margin: 0 16.5rem !important;
+  }
+  #view-profile .user-details, #view-profile .course-details, #admin-view-user .user-details, #admin-view-user .course-details,
+  #view-course .user-details,
+  #view-course .course-details {
+    margin: 5rem auto !important;
+    width: 40%;
   }
   #user-view-cart {
     padding: 0 16.5rem !important;

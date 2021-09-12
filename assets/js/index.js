@@ -11,22 +11,24 @@ const [menuBtn, mobileMenu, navLinks] = [
     query('#nav-links')
 ];
 
-// Mobile Menu Event
-menuBtn.addEventListener('click', () => {
+    // Mobile Menu Event
+    menuBtn.addEventListener('click', () => {
 
-    menuBtn.classList.toggle('menu-btn__active');
-    mobileMenu.classList.toggle('mobile-menu__active');
-});
+        menuBtn.classList.toggle('menu-btn__active');
+        mobileMenu.classList.toggle('mobile-menu__active');
+    });
 
-// Nav Session
-mobileMenu.innerHTML = `
-<a href="pages/course/courses.html" class="col-4 mx-auto my-2">Courses</a>
-<a href="pages/session/login.html" id="#mobile-session" class="col-3 mx-auto my-2">Login</a>
-<a href="pages/session/register.html" id="mobile-register" class="col-4 mx-auto my-2">Sign Up</a>
-`;
+    // Nav Session
+    mobileMenu.innerHTML = 
+        `
+        <a href="pages/course/courses.html" class="col-4 mx-auto my-2">Courses</a>
+        <a href="pages/session/login.html" id="#mobile-session" class="col-3 mx-auto my-2">Login</a>
+        <a href="pages/session/register.html" id="mobile-register" class="col-4 mx-auto my-2">Sign Up</a>
+        `;
 
-navLinks.innerHTML = `
-<a href="pages/course/courses.html" id="courses">Courses<img src="assets/images/caret.png" alt="caret" class="caret"></a>
-<a href="pages/session/login.html" id="session">Login</a>
-<a href="pages/session/register.html" id="register">Sign Up</a>
-`;
+    navLinks.innerHTML = 
+        `
+        <a href="pages/course/courses.html" id="courses">Courses<img src="assets/images/caret.png" alt="caret" class="caret"></a>
+        <a href="pages/session/login.html" id="session">Login</a>
+        <a href="pages/session/register.html" id="register">Sign Up</a>
+        `;

@@ -7,12 +7,12 @@
 
         .cart-item {
             border-bottom: 1px solid $secondary;
+
+            &:hover {
+                background-color: rgba($secondary, 0.5);
+            };
     
             .item-details {
-
-                .item-image {
-                    display: none !important;
-                };
 
                 .item-name {
                     font-size: 1rem;
@@ -28,7 +28,9 @@
                     font-style: italic;
                 };
 
-                a {
+                button {
+                    border: none;
+                    background: none;
 
                     img {
                         opacity: 0.25;
@@ -37,25 +39,28 @@
                         transition: 200ms ease-in-out;
 
                         &:hover {
+                            cursor: pointer;
                             opacity: 1;
                         };
-                    }
+                    };                    
+                };
 
-                    
+                .product-img {
+                    display: none !important;
                 };
             };
         };
 
+        .back-to-courses {
+            color: $primary;
+            font-size: 0.825rem;
+    
+            &:hover {
+                text-decoration: underline;
+            }
+        };
+
         .total-price-container {
-
-            .back-to-courses {
-                color: $primary;
-                font-size: 0.825rem;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            };
 
             .total {
                 font-size: 0.825rem;
@@ -71,6 +76,12 @@
         color: white;
         background-color: $primary;
         padding: 1rem 0 !important;
-        border-radius: 10px;
-    }
+        border-radius: 6px;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $footer;
+        };
+    };
 };

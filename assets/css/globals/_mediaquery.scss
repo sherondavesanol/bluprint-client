@@ -1,6 +1,6 @@
 @media only screen and (min-width: 576px) {
 
-    #courses {
+    #view-courses {
         
         .course-card {
             width: 48%;
@@ -68,14 +68,39 @@
 
     #admin-dashboard, 
     #admin-view-users, #admin-view-user, 
-    #admin-view-courses, #admin-view-course, 
-    #courses {
+    #admin-view-courses, #admin-view-course,
+    #admin-view-archived-courses, #admin-view-orders, 
+    #view-courses, #view-course, 
+    #view-profile {
         margin: 0 3.5rem !important;
         padding: 0 !important;
     };
 
     #user-view-cart {
-        padding: 0 3.5rem !important;
+
+        width: 70%;
+        margin: 0 auto !important;
+
+        .cart {
+            
+            .back-to-courses {
+                color: $primary;
+                font-size: 1rem;
+            };
+
+            .cart-item {
+        
+                .item-details {
+    
+                    .product-img {
+                        display: initial !important;
+                        height: 2.75rem;
+                        width: auto;
+                        opacity: 1;
+                    };
+                };
+            };
+        };
     };
 
     #admin-dashboard {
@@ -89,7 +114,7 @@
         };
     };
 
-    #courses {
+    #view-courses {
         
         .course-card {
             width: 31%;
@@ -148,16 +173,23 @@
     };
 
     #admin-dashboard, #admin-view-users, 
-    #admin-view-user, #admin-view-courses, 
-    #admin-view-course, #courses {
+    #admin-view-user, #admin-view-courses,
+    #admin-view-archived-courses, #admin-view-orders,  
+    #admin-view-course, #view-courses, 
+    #view-course, #view-profile {
         margin: 0 5rem !important;
     };
 
-    #user-view-cart {
-        padding: 0 5rem !important;
+    #view-profile, #admin-view-user,
+    #view-course {
+
+        .user-details, .course-details {
+            margin: 5rem auto !important;
+            width: 65%;
+        };
     };
     
-    #courses {
+    #view-courses {
         
         .course-card {
             width: 23%;
@@ -222,9 +254,20 @@
     };
 
     #admin-dashboard, #admin-view-users, 
-    #admin-view-user, #admin-view-courses, 
-    #admin-view-course, #courses {
+    #admin-view-user, #admin-view-courses,
+    #admin-view-archived-courses, #admin-view-orders,  
+    #admin-view-course, #view-courses, 
+    #view-course, #view-profile {
         margin: 0 7.5rem !important;
+    };
+
+    #view-profile, #admin-view-user,
+    #view-course {
+
+        .user-details, .course-details {
+            margin: 5rem auto !important;
+            width: 50%;
+        };
     };
 
     #user-view-cart {
@@ -268,20 +311,15 @@
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses, 
-    #admin-view-course {
+    #admin-view-archived-courses, #admin-view-orders, 
+    #admin-view-course, #view-courses, 
+    #view-course, #view-profile {
         
         margin: 0 11.5rem !important;
     };
 
     #user-view-cart {
         padding: 0 11.5rem !important;
-    };
-    
-    #courses {
-        
-        .course-card {
-            width: 18%;
-        };
     };
 };
 
@@ -334,9 +372,20 @@
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses, 
-    #admin-view-course {
+    #admin-view-archived-courses, #admin-view-orders, 
+    #admin-view-course, #view-courses, 
+    #view-course, #view-profile {
         
         margin: 0 16.5rem !important;
+    };
+
+    #view-profile, #admin-view-user,
+    #view-course {
+
+        .user-details, .course-details {
+            margin: 5rem auto !important;
+            width: 40%;
+        };
     };
 
     #user-view-cart {

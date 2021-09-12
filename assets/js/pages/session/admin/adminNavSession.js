@@ -18,31 +18,33 @@ menuBtn.addEventListener('click', () => {
 
 if (isLoggedIn !== null && isLoggedIn !== undefined) {
 
-        mobileMenu.innerHTML = `
+    mobileMenu.innerHTML = 
+        `
         <a href="../../course/courses.html" id="courses" class="col-4 mx-auto my-2">Courses</a>
         <a href="../../session/admin/admin.html" id="admin" class="col-4 mx-auto my-2">Admin</a>
-        <a href="../../user/profile.html" id="profile" class="col-5 mx-auto my-2">View Profile</a>
         <a href="../../session/logout.html" id="#mobile-session" class="col-3 mx-auto my-2">Logout</a>
         `;
 
-        navLinks.innerHTML = `
+    navLinks.innerHTML = 
+        `
         <a href="../../course/courses.html" id="courses">Courses<img src="../../../assets/images/caret.png" alt="caret" class="caret"></a>
         <a href="../../session/admin/admin.html" id="admin" class="col-4 mx-auto my-2">Admin</a>
-        <a href="../../user/profile.html" id="profile">Profile</a>
         <a href="../../session/logout.html" id="session">Logout</a>
-        `;
+        `;  
 
 } else {
 
-    mobileMenu.innerHTML = `
-    <a href="../../course/courses.html" class="col-4 mx-auto my-2">Courses</a>
-    <a href="../../session/login.html" id="#mobile-session" class="col-3 mx-auto my-2">Login</a>
-    <a href="../../register.html" id="mobile-register" class="col-4 mx-auto my-2">Sign Up</a>
-    `;
+    mobileMenu.innerHTML = 
+        `
+        <a href="../../course/courses.html" class="col-4 mx-auto my-2">Courses</a>
+        <a href="../../session/login.html" id="#mobile-session" class="col-3 mx-auto my-2">Login</a>
+        <a href="../../register.html" id="mobile-register" class="col-4 mx-auto my-2">Sign Up</a>
+        `;
 
-    navLinks.innerHTML = `
-    <a href="../../course/courses.html" id="courses">Courses<img src="../../assets/images/caret.png" alt="caret" class="caret"></a>
-    <a href="../../session/login.html" id="session">Login</a>
-    <a href="../../session/register.html" id="register">Sign Up</a>
-    `;
+    navLinks.innerHTML = 
+        `
+        <a href="../../course/courses.html" id="courses">Courses<img src="../../assets/images/caret.png" alt="caret" class="caret"></a>
+        <a href="../../session/login.html" id="session">Login</a>
+        <a href="../../session/register.html" id="register">Sign Up</a>
+        `;
 };

@@ -1,3 +1,6 @@
+// Cart Container
+const cart = query('#cart');
+
 // API Endpoints
 const VIEW_CART = 'http://localhost:3000/api/orders/view-cart';
 const VIEW_COURSE = 'http://localhost:3000/api/courses/view-course';
@@ -18,20 +21,15 @@ const viewCart = () => {
 
 const ASYNC = async () => {
     
-    // Cart Container
-    const cart = query('#cart');
-    
     // Cart Details
     const cartData = await viewCart();
 
     if (cartData.length > 0) {
-        
-        const courseData = cartData.map(data => data);
 
         const cartItems = [];
         const itemPrices = [];
 
-        for (let i = 0; i < courseData.length; i++) {
+        for (let i = 0; i < cartData.length; i++) {
 
             await fetch(VIEW_COURSE, {
                 method: 'POST',
@@ -39,15 +37,18 @@ const ASYNC = async () => {
                     "Authorization": `Bearer ${token}`,
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify({id: courseData[i].courseId})
+                body: JSON.stringify({id: cartData[i].courseId})
             })
             .then(data => data.json())
-            .then(data => cartItems.push({itemData: data, addedOn: courseData[i].addedOn}));
+            .then(data => cartItems.push({itemData: data, addedOn: cartData[i].addedOn}));
         };
+
+        const cartItemDiv = document.createDocumentFragment();
         
         cartItems.map(item => {
 
             // Cart item details
+            const courseId = item.itemData._id;
             const name = item.itemData.name;
             const price = item.itemData.price;
             
@@ -61,40 +62,60 @@ const ASYNC = async () => {
             
             const addedOn = new Date(item.addedOn).toLocaleString('en-US', dateOptions);
 
-            // Append cart item to cart container
-            const appendCartItem = () => {
-                
-                const cartItemDiv = document.createElement('div');
+            const cartItem = document.createElement('div');
 
-                cartItemDiv.innerHTML = 
-                    `
-                    <div class="cart-item pb-1 my-2 d-flex align-items-center justify-content-between">
-                        <div class="item-details">
-                            <a class="item-image" href="#">
-                            image</a>
-                        </div>
-                        <div class="item-details col-7">
-                            <p class="item-name">${name}</p>
-                            <small class="item-added-on">${addedOn}</small>
-                        </div>
-                        <div class="item-details col-4">
-                            <p class="item-price fw-900">$${price}.00</p>
-                        </div>
-                        <div class="item-details flex-end">
-                            <a class="remove-item" href="#">
-                            <img src="../../assets/images/remove-item.png"></a>
-                        </div>
+            cartItem.innerHTML = 
+                `
+                <div class="cart-item p-2 d-flex align-items-center justify-content-between">
+                    <div class="item-details col-md-2">
+                        <img class="product-img" src="../../assets/images/icon.png">
                     </div>
-                    `;
+                    <div class="item-details col-7 col-md-6">
+                        <p class="item-name">${name}</p>
+                        <small class="item-added-on">${addedOn}</small>
+                    </div>
+                    <div class="item-details col-3">
+                        <p class="item-price fw-900">$${price}</p>
+                    </div>
+                    <div class="item-details flex-end">
+                        <button id="remove-item" value="${courseId}">
+                        <img src="../../assets/images/remove-item.png"></button>
+                    </div>
+                </div>
+                `;
 
-                cart.appendChild(cartItemDiv);
-            };
-
-            appendCartItem();
+            cartItemDiv.appendChild(cartItem);
 
             // Push item price to itemPrices (for total price)
             itemPrices.push(price);
         });
+
+        cart.appendChild(cartItemDiv);
+
+        // Remove Cart Item
+        const removeItemBtns = document.querySelectorAll('#remove-item');
+        
+        for (let i = 0; i < removeItemBtns.length; i++) {
+
+            removeItemBtns[i].addEventListener("click", function() {
+
+                const courseId = removeItemBtns[i].value;
+
+                fetch('http://localhost:3000/api/orders/delete-cart-item', 
+                {
+                    method: 'PATCH',
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        courseId
+                    })
+                })
+                .then(data => data.json())
+                .then(data => window.location.reload(true));
+            });
+        };
         
         // Sum of prices in itemPrices container
         let totalPrice = itemPrices.reduce((sum, price) => sum + price, 0);
@@ -106,11 +127,15 @@ const ASYNC = async () => {
 
             totalPriceDiv.innerHTML = 
                 `
-                <div class="total-price-container mt-4 d-flex justify-content-between">
-                    <a class="back-to-courses col-7" href="../course/courses.html">Back to Courses</a>
-                    <p class="total col-2">Total:</p>
-                    <p class="total-price col-3 fw-900">$${totalPrice}</p>
+                <div class="total-price-container mt-4 px-2 px-sm-4 px-md-2 d-flex justify-content-between">
+                    <a class="back-to-courses" href="../course/courses.html">
+                    Back to Courses</a>
+                    <span class="col-2 col-md-5"></span>
+                    <p class="col-5 col-md-4">Total:
+                    <span class="mx-2 total-price fw-900">$${totalPrice}</span>
+                    </p>
                 </div>
+                <a onClick="checkout()" class="checkout-btn uppercase fw-900 mt-5 mx-auto d-flex justify-content-center">proceed to checkout</a>
                 `
 
             cart.appendChild(totalPriceDiv);
@@ -129,6 +154,7 @@ const ASYNC = async () => {
                             <div>
                             <p>Your cart is empty.</p>
                             </div>
+                            <a class="back-to-courses col-7" href="../course/courses.html">Back to Courses</a>
                             `;
 
             cart.appendChild(div);   
