@@ -12,7 +12,7 @@ if (localStorage.getItem('isAdmin') === 'true') {
     ];
 
     // Get users count
-    fetch('http://localhost:3000/api/admin/stats/users-count',
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/admin/stats/users-count',
         {
             method: "GET",
             headers: {"Authorization" : `Bearer ${token}`}
@@ -27,7 +27,7 @@ if (localStorage.getItem('isAdmin') === 'true') {
         });
 
     // Get courses count
-    fetch('http://localhost:3000/api/admin/stats/courses-count',
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/admin/stats/courses-count',
     {
         method: "GET",
         headers: {"Authorization" : `Bearer ${token}`}
@@ -42,7 +42,7 @@ if (localStorage.getItem('isAdmin') === 'true') {
     });
 
     // Get admin count
-    fetch('http://localhost:3000/api/admin/stats/admin-count',
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/admin/stats/admin-count',
         {
             method: "GET",
             headers: {"Authorization" : `Bearer ${token}`}

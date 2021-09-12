@@ -133,12 +133,16 @@ header .hero-text a:hover {
 
 #sign-up {
   background: #DFE8FF;
-  height: 100vh;
+  height: calc(100vh - 4rem);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
 
 #sign-up form {
-  width: 90vw;
+  width: calc(100vw - 3rem);
   color: #1A4FD6;
+  z-index: 1;
 }
 
 #sign-up form .form-group {
@@ -185,6 +189,116 @@ header .hero-text a:hover {
 
 #sign-up form .form-group .button {
   font-size: 1rem;
+}
+
+#sign-up .shape-1, #sign-up .shape-2, #sign-up .shape-3 {
+  position: absolute;
+  z-index: -1;
+}
+
+#sign-up .shape-1 {
+  width: 25rem;
+  height: auto;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  top: -8.5rem;
+  right: -10rem;
+  -webkit-animation: float1 3s ease-in-out infinite;
+          animation: float1 3s ease-in-out infinite;
+}
+
+#sign-up .shape-2 {
+  width: 20rem;
+  height: auto;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  bottom: -3rem;
+  right: -8rem;
+  -webkit-animation: float2 3s ease-in-out infinite;
+          animation: float2 3s ease-in-out infinite;
+}
+
+#sign-up .shape-3 {
+  width: 20rem;
+  height: auto;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  top: 12.5rem;
+  left: -10rem;
+  -webkit-animation: float3 3s ease-in-out infinite;
+          animation: float3 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes float1 {
+  from {
+    top: -15rem;
+  }
+  50% {
+    top: -5rem;
+  }
+  100% {
+    top: -15rem;
+  }
+}
+
+@keyframes float1 {
+  from {
+    top: -15rem;
+  }
+  50% {
+    top: -5rem;
+  }
+  100% {
+    top: -15rem;
+  }
+}
+
+@-webkit-keyframes float2 {
+  from {
+    bottom: -15rem;
+  }
+  50% {
+    bottom: -25rem;
+  }
+  100% {
+    bottom: -15rem;
+  }
+}
+
+@keyframes float2 {
+  from {
+    bottom: -15rem;
+  }
+  50% {
+    bottom: -25rem;
+  }
+  100% {
+    bottom: -15rem;
+  }
+}
+
+@-webkit-keyframes float3 {
+  from {
+    top: 7.5rem;
+  }
+  50% {
+    top: 15rem;
+  }
+  100% {
+    top: 7.5rem;
+  }
+}
+
+@keyframes float3 {
+  from {
+    top: 7.5rem;
+  }
+  50% {
+    top: 15rem;
+  }
+  100% {
+    top: 7.5rem;
+  }
 }
 
 .login {
@@ -552,6 +666,37 @@ header .hero-text a:hover {
   color: white;
   background-color: #1a4fd6;
   border: 1px solid #1a4fd6;
+}
+
+#admin-view-archived-course {
+  color: #1A4FD6;
+  margin: 0 1.5rem !important;
+}
+
+#admin-view-archived-course .courses {
+  color: #1A4FD6;
+}
+
+#admin-view-archived-course .courses:hover {
+  text-decoration: underline;
+}
+
+#admin-view-archived-course .course-details p {
+  font-size: 1.25rem;
+}
+
+#admin-view-archived-course .course-details a {
+  color: white;
+  background-color: #1A4FD6;
+  padding: 0.25rem 0.75rem !important;
+  border-radius: 1rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#admin-view-archived-course .course-details a:hover {
+  color: white;
+  background-color: #232D95;
 }
 
 #admin-view-archived-courses {
@@ -922,6 +1067,54 @@ header .hero-text a:hover {
   color: rgba(26, 79, 214, 0.65);
 }
 
+#hero-banner {
+  color: #1A4FD6;
+  position: relative;
+  padding: 5rem 1.5rem !important;
+  background-color: #DFE8FF;
+}
+
+#hero-banner h1 {
+  font-family: "Overpass", "Arial", sans-serif;
+}
+
+#hero-banner #banner-card {
+  padding: 3rem !important;
+}
+
+#hero-banner #banner-card .banner-links {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#hero-banner #banner-card .banner-links .add-course, #hero-banner #banner-card .banner-links .my-courses {
+  padding: 0.35rem 0.5rem !important;
+  border-radius: 1rem;
+}
+
+#hero-banner #banner-card .banner-links .my-courses {
+  color: white;
+  background-color: #1A4FD6;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#hero-banner #banner-card .banner-links .my-courses:hover {
+  background-color: #232D95;
+}
+
+#hero-banner #banner-card .banner-links .add-course {
+  color: #1A4FD6;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #1A4FD6;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+#hero-banner #banner-card .banner-links .add-course:hover {
+  color: white;
+  background-color: #232D95;
+}
+
 nav {
   position: relative;
   background-color: white;
@@ -998,7 +1191,7 @@ nav .box .menu-btn .mobile-menu {
   width: calc(100vw - 3rem);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.25);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
@@ -1074,9 +1267,9 @@ nav .box .nav-links #profile {
 }
 
 .glass {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(7.5px) saturate(180%);
+  -webkit-backdrop-filter: blur(7.5px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.35);
   border-radius: 12px;
   box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
   -webkit-box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
@@ -1130,11 +1323,22 @@ nav .box .nav-links #profile {
   #admin-dashboard,
   #admin-view-users, #admin-view-user,
   #admin-view-courses, #admin-view-course,
-  #admin-view-archived-courses, #admin-view-orders,
-  #view-courses, #view-course,
-  #view-profile {
+  #admin-view-archived-course,
+  #admin-view-archived-courses,
+  #admin-view-orders, #view-courses,
+  #view-course, #view-profile {
     margin: 0 3.5rem !important;
     padding: 0 !important;
+  }
+  #hero-banner {
+    padding: 5rem 3.5rem !important;
+  }
+  #hero-banner h1 {
+    font-size: 4rem;
+  }
+  #hero-banner #banner-card .banner-links .add-course, #hero-banner #banner-card .banner-links .my-courses {
+    font-size: 1.25rem;
+    padding: 0.35rem 0.75rem !important;
   }
   #user-view-cart {
     width: 70%;
@@ -1193,10 +1397,17 @@ nav .box .nav-links #profile {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-archived-courses, #admin-view-orders,
-  #admin-view-course, #view-courses,
-  #view-course, #view-profile {
+  #admin-view-archived-course,
+  #admin-view-archived-courses,
+  #admin-view-orders, #admin-view-course,
+  #view-courses, #view-course, #view-profile {
     margin: 0 5rem !important;
+  }
+  #hero-banner {
+    padding: 7.5rem 5rem !important;
+  }
+  #hero-banner h1 {
+    font-size: 5rem;
   }
   #view-profile .user-details, #view-profile .course-details, #admin-view-user .user-details, #admin-view-user .course-details,
   #view-course .user-details,
@@ -1242,10 +1453,22 @@ nav .box .nav-links #profile {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-archived-courses, #admin-view-orders,
-  #admin-view-course, #view-courses,
-  #view-course, #view-profile {
+  #admin-view-archived-course,
+  #admin-view-archived-courses,
+  #admin-view-orders, #admin-view-course,
+  #view-courses, #view-course, #view-profile {
     margin: 0 7.5rem !important;
+  }
+  #hero-banner {
+    padding: 6rem 7.5rem !important;
+    height: calc(100vh - 4rem);
+  }
+  #hero-banner h1 {
+    font-size: 6rem;
+  }
+  #hero-banner #banner-card .banner-links .add-course, #hero-banner #banner-card .banner-links .my-courses {
+    font-size: 1.25rem;
+    padding: 0.35rem 0.75rem !important;
   }
   #view-profile .user-details, #view-profile .course-details, #admin-view-user .user-details, #admin-view-user .course-details,
   #view-course .user-details,
@@ -1276,10 +1499,14 @@ nav .box .nav-links #profile {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-archived-courses, #admin-view-orders,
-  #admin-view-course, #view-courses,
-  #view-course, #view-profile {
+  #admin-view-archived-course,
+  #admin-view-archived-courses,
+  #admin-view-orders, #admin-view-course,
+  #view-courses, #view-course, #view-profile {
     margin: 0 11.5rem !important;
+  }
+  #hero-banner {
+    padding: 5rem 11.5rem !important;
   }
   #user-view-cart {
     padding: 0 11.5rem !important;
@@ -1315,10 +1542,21 @@ nav .box .nav-links #profile {
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,
-  #admin-view-archived-courses, #admin-view-orders,
-  #admin-view-course, #view-courses,
-  #view-course, #view-profile {
+  #admin-view-archived-course,
+  #admin-view-archived-courses,
+  #admin-view-orders, #admin-view-course,
+  #view-courses, #view-course, #view-profile {
     margin: 0 16.5rem !important;
+  }
+  #hero-banner {
+    padding: 12.5rem 16.5rem !important;
+  }
+  #hero-banner h1 {
+    font-size: 7.5rem;
+  }
+  #hero-banner #banner-card .banner-links .add-course, #hero-banner #banner-card .banner-links .my-courses {
+    font-size: 1.25rem;
+    padding: 0.35rem 0.75rem !important;
   }
   #view-profile .user-details, #view-profile .course-details, #admin-view-user .user-details, #admin-view-user .course-details,
   #view-course .user-details,
@@ -1328,6 +1566,30 @@ nav .box .nav-links #profile {
   }
   #user-view-cart {
     padding: 0 16.5rem !important;
+  }
+  #sign-up .shape-1 {
+    width: 40rem;
+    height: auto;
+    -webkit-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+    top: -13.5rem;
+    right: -10rem;
+  }
+  #sign-up .shape-2 {
+    width: 40rem;
+    height: auto;
+    -webkit-transform: rotate(-2000deg);
+            transform: rotate(-2000deg);
+    bottom: -15rem;
+    right: -8rem;
+  }
+  #sign-up .shape-3 {
+    width: 40rem;
+    height: auto;
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+    top: 7.5rem;
+    left: -12.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,7 @@
 // Delete course
 const deleteCourse = () => {'click', 
     
-    fetch('http://localhost:3000/api/courses/delete-course', 
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/courses/delete-course', 
         {
             method: "DELETE",
             headers: {

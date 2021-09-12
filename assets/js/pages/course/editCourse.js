@@ -12,7 +12,7 @@ const [editCourse, courseName, courseCategory, coursePrice, courseDescription, s
     query('#submit-btn')
 ];
 
-fetch('http://localhost:3000/api/admin/admin-view-course', 
+fetch('https://bluprint-api-sdss.herokuapp.com/api/admin/admin-view-course', 
 {
     method: "POST",
     headers: {
@@ -43,7 +43,7 @@ editCourse.addEventListener('submit', (e) => {
         courseDescription.value,
     ];
 
-    fetch('http://localhost:3000/api/courses/edit-course',
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/courses/edit-course',
     {
         method: "PUT",
         headers: {

@@ -1,48 +1,34 @@
-// User Details
-const [userName, userEmail, userMobile] = [
-    query('#user-name'),
-    query('#user-email'),
-    query('#user-mobile')
-];
+if (localStorage.getItem('isAdmin') === 'true') {
 
-const orderHistory = query('#order-history');
+    // Order Details
+    const orderDetails = query('#order-details');
 
-// User Id
-const userId = localStorage.getItem('id');
+    // Order Id
+    const params = new URLSearchParams(window.location.search);
+    const orderId = (params.get('orderId'));
 
-// API Endpoints
-const VIEW_PROFILE = 'https://bluprint-api-sdss.herokuapp.com/api/users/profile'
-const VIEW_ORDERS = 'https://bluprint-api-sdss.herokuapp.com/api/users/view-orders'
+    // API Endpoints
+    const VIEW_ORDER = 'https://bluprint-api-sdss.herokuapp.com/api/admin/admin-view-order'
 
-// Options
-const viewProfileOptions = {
-    method: "POST",
-    headers: {
-        "Authorization" : `Bearer ${token}`,
-        "Content-Type" : "application/json"
-    },
-    body: JSON.stringify({
-        id: userId
-    })
-}
+    // Options
+    const viewOrderOptions = {
+        method: "POST",
+        headers: {
+            "Authorization" : `Bearer ${token}`,
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify({
+            id: orderId
+        })
+    }
 
-// Fetch API
-fetch(VIEW_PROFILE, viewProfileOptions)
-    .then(data => data.json())
-    .then(data => {
-        
-        userName.innerText = `${data.firstName} ${data.lastName}`;
-        userEmail.innerText = `${data.email}`;
-        userMobile.innerText = `${data.mobileNumber}`;
-    });
-
-
-fetch(VIEW_ORDERS, viewProfileOptions)
-    .then(data => data.json())
-    .then(data => {
-
-        data.map(order => {
+    fetch(VIEW_ORDER, viewOrderOptions)
+        .then(data => data.json())
+        .then(order => {
             
+            // Order Details
+            const orderId = order._id;
+
             const dateOptions = {
                 year: 'numeric', 
                 month: '2-digit', 
@@ -50,21 +36,17 @@ fetch(VIEW_ORDERS, viewProfileOptions)
                 hour: '2-digit', 
                 minute: '2-digit'
             };
-
-            // Order Details
-            const orderId = order._id;
-
+            
             const purchasedOn = new Date(order.purchasedOn)
                 .toLocaleString('en-US', dateOptions);
-
+        
             const totalAmount = order.totalAmount;
-
+        
             const courses = order.courses;
             let orderedItems = '';
                 courses.map(course => orderedItems += 
-                    (`${course.name} $${course.price}<br>`));
-
-            // Create Order Div
+                    (`${course.name} $${course.price} <br>`));
+    
             const orderDiv = document.createElement('div');
 
             orderDiv.innerHTML = 
@@ -89,7 +71,10 @@ fetch(VIEW_ORDERS, viewProfileOptions)
                 </div>
                 `;
 
-            orderHistory.appendChild(orderDiv);
+            orderDetails.appendChild(orderDiv);
         });
-    });
-// End of view orders fetch
+
+} else {
+
+    window.location.replace('../../index.html');
+};

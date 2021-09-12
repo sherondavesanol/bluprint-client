@@ -7,7 +7,7 @@ if (localStorage.getItem('isAdmin') === 'true') {
     const ordersBody = query('#orders-body');
 
     // Get users count
-    fetch('http://localhost:3000/api/admin/admin-view-orders',
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/admin/admin-view-orders',
         {
             method: "GET",
             headers: {"Authorization" : `Bearer ${token}`}

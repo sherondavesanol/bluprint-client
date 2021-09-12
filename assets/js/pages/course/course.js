@@ -16,7 +16,7 @@ const [courseName, courseCategory, courseDescription, coursePrice] = [
 // Course Buttons
 const courseButtons = query('#course-buttons');
 
-fetch('http://localhost:3000/api/courses/view-course', 
+fetch('https://bluprint-api-sdss.herokuapp.com/api/courses/view-course', 
 {
     method: "POST",
     headers: {

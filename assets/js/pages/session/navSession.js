@@ -22,7 +22,7 @@ menuBtn.addEventListener('click', () => {
 // Check Cart Count
 const checkCartCount = () => {
     
-    return fetch('http://localhost:3000/api/orders/view-cart', 
+    return fetch('https://bluprint-api-sdss.herokuapp.com/api/orders/view-cart', 
             {
                 method: 'POST',
                 headers: {"Authorization": `Bearer ${token}`}
@@ -87,14 +87,12 @@ const navSession = async () => {
 
         mobileMenu.innerHTML = 
             `
-            <a href="../course/courses.html" class="col-4 mx-auto my-2">Courses</a>
             <a href="../session/login.html" id="#mobile-session" class="col-3 mx-auto my-2">Login</a>
             <a href="./register.html" id="mobile-register" class="col-4 mx-auto my-2">Sign Up</a>
             `;
 
         navLinks.innerHTML = 
             `
-            <a href="../course/courses.html" id="courses">Courses<img src="../../assets/images/caret.png" alt="caret" class="caret"></a>
             <a href="../session/login.html" id="session">Login</a>
             <a href="../session/register.html" id="register">Sign Up</a>
             `;

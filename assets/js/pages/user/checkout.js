@@ -1,6 +1,6 @@
 // API Endpoints
-const CREATE_ORDER = 'http://localhost:3000/api/orders/create-order';
-const CLEAR_CART = 'http://localhost:3000/api/orders/clear-cart';
+const CREATE_ORDER = 'https://bluprint-api-sdss.herokuapp.com/api/orders/create-order';
+const CLEAR_CART = 'https://bluprint-api-sdss.herokuapp.com/api/orders/clear-cart';
 
 // Checkout
 const checkout = async () => {

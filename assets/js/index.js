@@ -21,14 +21,12 @@ const [menuBtn, mobileMenu, navLinks] = [
     // Nav Session
     mobileMenu.innerHTML = 
         `
-        <a href="pages/course/courses.html" class="col-4 mx-auto my-2">Courses</a>
         <a href="pages/session/login.html" id="#mobile-session" class="col-3 mx-auto my-2">Login</a>
         <a href="pages/session/register.html" id="mobile-register" class="col-4 mx-auto my-2">Sign Up</a>
         `;
 
     navLinks.innerHTML = 
         `
-        <a href="pages/course/courses.html" id="courses">Courses<img src="assets/images/caret.png" alt="caret" class="caret"></a>
         <a href="pages/session/login.html" id="session">Login</a>
         <a href="pages/session/register.html" id="register">Sign Up</a>
         `;

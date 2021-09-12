@@ -2,8 +2,8 @@
 const cart = query('#cart');
 
 // API Endpoints
-const VIEW_CART = 'http://localhost:3000/api/orders/view-cart';
-const VIEW_COURSE = 'http://localhost:3000/api/courses/view-course';
+const VIEW_CART = 'https://bluprint-api-sdss.herokuapp.com/api/orders/view-cart';
+const VIEW_COURSE = 'https://bluprint-api-sdss.herokuapp.com/api/courses/view-course';
 
 // Options
 const viewCartOptions = {
@@ -101,7 +101,7 @@ const ASYNC = async () => {
 
                 const courseId = removeItemBtns[i].value;
 
-                fetch('http://localhost:3000/api/orders/delete-cart-item', 
+                fetch('https://bluprint-api-sdss.herokuapp.com/api/orders/delete-cart-item', 
                 {
                     method: 'PATCH',
                     headers: {
@@ -152,9 +152,9 @@ const ASYNC = async () => {
 
             div.innerHTML = `
                             <div>
-                            <p>Your cart is empty.</p>
+                            <h3>Your cart is empty.</h3>
                             </div>
-                            <a class="back-to-courses col-7" href="../course/courses.html">Back to Courses</a>
+                            <a class="back-to-courses col-4 col-md-3 d-block mt-4" href="../course/courses.html">Back to Courses</a>
                             `;
 
             cart.appendChild(div);   

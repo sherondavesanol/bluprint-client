@@ -5,7 +5,7 @@ const courseId = (params.get('courseId'));
 // Archive course
 const archiveCourse = () => {'click', 
     
-    fetch('http://localhost:3000/api/courses/archive-course', 
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/courses/archive-course', 
         {
             method: "PUT",
             headers: {

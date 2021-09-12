@@ -14,7 +14,7 @@ if (localStorage.getItem('isAdmin') === 'true') {
     const params = new URLSearchParams(window.location.search);
     const userId = (params.get('userId'));
 
-    fetch('http://localhost:3000/api/admin/admin-view-user', 
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/admin/admin-view-user', 
         {
             method: "POST",
             headers: {

@@ -1,0 +1,32 @@
+#admin-view-archived-course {
+    color: $primary;
+    margin: 0 1.5rem !important;
+    
+    .courses {
+        color: $primary;
+
+        &:hover {
+            text-decoration: underline;
+        };
+    };
+
+    .course-details {
+
+        p {
+            font-size: 1.25rem;
+        };
+
+        a { 
+            color: white;
+            background-color: $primary;
+            padding: 0.25rem 0.75rem !important;
+            border-radius: 1rem;
+            transition: 200ms ease-in-out;
+    
+            &:hover {
+                color: white;
+                background-color: $footer;
+            };
+        };
+    };
+};

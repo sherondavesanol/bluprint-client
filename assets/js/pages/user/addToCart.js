@@ -2,7 +2,7 @@ const addToCart = () => {
 
 
     // Check cart items
-    fetch('http://localhost:3000/api/orders/check-cart-items', 
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/orders/check-cart-items', 
     {
         method: 'POST',
         headers: {
@@ -19,7 +19,7 @@ const addToCart = () => {
         if (data === false) {
 
         // Add to cart
-        fetch('http://localhost:3000/api/orders/add-to-cart', 
+        fetch('https://bluprint-api-sdss.herokuapp.com/api/orders/add-to-cart', 
         {
             method: 'POST',
             headers: {

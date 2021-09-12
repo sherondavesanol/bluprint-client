@@ -32,6 +32,8 @@ if (localStorage.getItem('isAdmin') === 'true') {
         .then(data => data.json())
         .then(data => {
 
+            console.log(data);
+
             courseName.innerText = `${data.name}`;
             courseCategory.innerText = `${data.category}`;
             courseDescription.innerText = `${data.description}`;
@@ -41,7 +43,7 @@ if (localStorage.getItem('isAdmin') === 'true') {
 
                 `
                 <a href="./admin-edit-course.html?courseId=${courseId}" class="btn btn-primary mt-4">Edit Course</a>
-                <a onClick="archiveCourse()" class="btn btn-primary mt-4">Archive Course</a>
+                <a onClick="restoreCourse()" class="btn btn-primary mt-4">Restore Course</a>
                 <a onClick="deleteCourse()" class="btn btn-primary mt-4">Delete Course</a>
                 `
         });

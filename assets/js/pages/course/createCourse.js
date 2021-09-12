@@ -19,7 +19,7 @@ createCourse.addEventListener('submit', (e) => {
         courseDescription.value
     ];
 
-    fetch('http://localhost:3000/api/courses/check-course-name',
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/courses/check-course-name',
     {
         method: "POST",
         headers: {
@@ -31,7 +31,7 @@ createCourse.addEventListener('submit', (e) => {
     .then(data => data.json())
     .then(data => { if(data !== true) {
 
-        fetch('http://localhost:3000/api/courses/create-course',
+        fetch('https://bluprint-api-sdss.herokuapp.com/api/courses/create-course',
         {
             method: "POST",
             headers: {
@@ -42,7 +42,8 @@ createCourse.addEventListener('submit', (e) => {
                 name,
                 price,
                 category,
-                description
+                description,
+                createdOn: Date()
             })
         })
         .then(data => data.json())

@@ -22,7 +22,7 @@ registerUser.addEventListener('submit', (e) => {
 
     } else {
 
-        fetch('http://localhost:3000/api/users/login',
+        fetch('https://bluprint-api-sdss.herokuapp.com/api/users/login',
         {
             method: "POST",
             headers: {"Content-Type" : "application/json"},
@@ -46,7 +46,7 @@ registerUser.addEventListener('submit', (e) => {
 
                 if (token) {
 
-                    fetch('http://localhost:3000/api/users/user-details',
+                    fetch('https://bluprint-api-sdss.herokuapp.com/api/users/user-details',
                         {
                             method: "GET",
                             headers: {"Authorization" : `Bearer ${token}`}
@@ -62,7 +62,7 @@ registerUser.addEventListener('submit', (e) => {
 
                         isAdmin 
                             ? window.location.replace('admin/admin.html')
-                            : window.location.replace('../../index.html')
+                            : window.location.replace('../user/user.html')
                     });
                 };
             };

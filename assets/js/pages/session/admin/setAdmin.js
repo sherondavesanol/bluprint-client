@@ -5,7 +5,7 @@ const userId = (params.get('userId'));
 // Set user as admin
 const setAdmin = () => {'click', 
     
-    fetch('http://localhost:3000/api/admin/set-admin', 
+    fetch('https://bluprint-api-sdss.herokuapp.com/api/admin/set-admin', 
         {
             method: "PUT",
             headers: {

@@ -69,11 +69,31 @@
     #admin-dashboard, 
     #admin-view-users, #admin-view-user, 
     #admin-view-courses, #admin-view-course,
-    #admin-view-archived-courses, #admin-view-orders, 
-    #view-courses, #view-course, 
-    #view-profile {
+    #admin-view-archived-course, 
+    #admin-view-archived-courses, 
+    #admin-view-orders, #view-courses, 
+    #view-course, #view-profile {
         margin: 0 3.5rem !important;
         padding: 0 !important;
+    };
+
+    #hero-banner {
+        padding: 5rem 3.5rem !important;
+
+        h1 {
+            font-size: 4rem;
+        };
+
+        #banner-card {
+            
+            .banner-links {
+
+                .add-course, .my-courses {
+                    font-size: 1.25rem;
+                    padding: 0.35rem 0.75rem !important;
+                };
+            };
+        };
     };
 
     #user-view-cart {
@@ -174,10 +194,19 @@
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses,
-    #admin-view-archived-courses, #admin-view-orders,  
-    #admin-view-course, #view-courses, 
-    #view-course, #view-profile {
+    #admin-view-archived-course, 
+    #admin-view-archived-courses, 
+    #admin-view-orders, #admin-view-course, 
+    #view-courses, #view-course, #view-profile {
         margin: 0 5rem !important;
+    };
+
+    #hero-banner {
+        padding: 7.5rem 5rem !important;
+
+        h1 {
+            font-size: 5rem;
+        };
     };
 
     #view-profile, #admin-view-user,
@@ -255,10 +284,31 @@
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses,
-    #admin-view-archived-courses, #admin-view-orders,  
-    #admin-view-course, #view-courses, 
-    #view-course, #view-profile {
+    #admin-view-archived-course, 
+    #admin-view-archived-courses, 
+    #admin-view-orders,  #admin-view-course, 
+    #view-courses, #view-course, #view-profile{
         margin: 0 7.5rem !important;
+    };
+
+    #hero-banner {
+        padding: 6rem 7.5rem !important;
+        height: calc(100vh - 4rem);
+
+        h1 {
+            font-size: 6rem;
+        };
+
+        #banner-card {
+            
+            .banner-links {
+
+                .add-course, .my-courses {
+                    font-size: 1.25rem;
+                    padding: 0.35rem 0.75rem !important;
+                };
+            };
+        };
     };
 
     #view-profile, #admin-view-user,
@@ -311,11 +361,16 @@
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses, 
-    #admin-view-archived-courses, #admin-view-orders, 
-    #admin-view-course, #view-courses, 
-    #view-course, #view-profile {
+    #admin-view-archived-course, 
+    #admin-view-archived-courses, 
+    #admin-view-orders, #admin-view-course, 
+    #view-courses, #view-course, #view-profile {
         
         margin: 0 11.5rem !important;
+    };
+
+    #hero-banner {
+        padding: 5rem 11.5rem !important;
     };
 
     #user-view-cart {
@@ -372,11 +427,31 @@
 
     #admin-dashboard, #admin-view-users, 
     #admin-view-user, #admin-view-courses, 
-    #admin-view-archived-courses, #admin-view-orders, 
-    #admin-view-course, #view-courses, 
-    #view-course, #view-profile {
+    #admin-view-archived-course,
+    #admin-view-archived-courses,
+    #admin-view-orders, #admin-view-course, 
+    #view-courses, #view-course, #view-profile {
         
         margin: 0 16.5rem !important;
+    };
+
+    #hero-banner {
+        padding: 12.5rem 16.5rem !important;
+
+        h1 {
+            font-size: 7.5rem;
+        };
+
+        #banner-card {
+            
+            .banner-links {
+
+                .add-course, .my-courses {
+                    font-size: 1.25rem;
+                    padding: 0.35rem 0.75rem !important;
+                };
+            };
+        };
     };
 
     #view-profile, #admin-view-user,
@@ -390,5 +465,33 @@
 
     #user-view-cart {
         padding: 0 16.5rem !important;
+    };
+
+    
+    #sign-up {
+
+        .shape-1 {
+            width: 40rem;
+            height: auto;
+            transform: rotate(-35deg);
+            top: -13.5rem;
+            right: -10rem;
+        };
+
+        .shape-2 {
+            width: 40rem;
+            height: auto;
+            transform: rotate(-2000deg);
+            bottom: -15rem;
+            right: -8rem;
+        };
+
+        .shape-3 {
+            width: 40rem;
+            height: auto;
+            transform: rotate(-30deg);
+            top: 7.5rem;
+            left: -12.5rem;
+        };
     };
 };
