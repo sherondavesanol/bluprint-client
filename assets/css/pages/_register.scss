@@ -9,6 +9,7 @@
         width: calc(100vw - 3rem);
         color: $primary;
         z-index: 1;
+        overflow: inital;
 
         .form-group {
             font-family: $helvetica;

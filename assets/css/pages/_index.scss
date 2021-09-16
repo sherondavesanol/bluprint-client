@@ -1,7 +1,7 @@
 header {
+    padding: 0 1.5rem !important;
     position: relative;
     background-color: white;
-    padding: 0 1.5rem !important;
     height: calc(100vh - 4rem);
     z-index: 0;
 
@@ -57,5 +57,39 @@ header {
                 background-color: $footer;
             };
         };
+    };
+};
+
+#cards {
+    padding: 1.5rem !important;
+    background-color: $secondary;
+    font-family: $helvetica;
+    color: $primary;
+
+    .card-container {
+        min-height: 25rem;
+        box-shadow: none;
+
+        img {
+            width: 10rem;
+            height: auto;
+        };
+    };
+};
+
+footer {
+    padding: 1.5rem !important;
+    background-color: $footer;
+    color: white;
+
+
+    h3 {
+        font-family: $overpass;
+        font-size: 2rem;
+    };
+
+    img {
+        width: 4rem;
+        height: auto;
     };
 };

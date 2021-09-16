@@ -33,7 +33,7 @@ const addToCart = () => {
         })
         .then(data => data.json())
         .then(data => data 
-            ? window.location.reload(true)
+            ? alert('done')
             : alert ('fail'))
 
         } else {

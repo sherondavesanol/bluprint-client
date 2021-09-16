@@ -57,27 +57,32 @@ const navSession = async () => {
         } else {
 
             query('#logo-link').setAttribute('href', '../user/user.html');
+
+            mobileMenu.innerHTML = `
+            <a href="../course/courses.html" class="col-4 mx-auto my-2">Courses</a>
+            <a href="../user/profile.html" id="profile" class="col-5 mx-auto my-2">View Profile</a>
+            <a href="../user/view-cart.html" id="mobile-view-cart" class="col-5 mx-auto my-2"></a>
+            <a href="../session/logout.html" id="#mobile-session" class="col-3 mx-auto my-2">Logout</a>
+            `;
+
+            navLinks.innerHTML = `
+            <a href="../course/courses.html" id="courses">Courses<img src="../../assets/images/caret.png" alt="caret" class="caret"></a>
+            <a href="../user/profile.html" id="profile">Profile</a>
+            <a href="../user/view-cart.html" id="view-cart"></a>
+            <a href="../session/logout.html" id="session">Logout</a>
+            `;
             
             // Set Cart Count
             const setCartCount = async () => {
 
                 let cartCount = await checkCartCount();
-                
                 cartCount < 1 ? cartCount : 0;
 
-                mobileMenu.innerHTML = `
-                <a href="../course/courses.html" class="col-4 mx-auto my-2">Courses</a>
-                <a href="../user/profile.html" id="profile" class="col-5 mx-auto my-2">View Profile</a>
-                <a href="../user/view-cart.html" id="view-cart" class="col-5 mx-auto my-2">View Cart (${cartCount})</a>
-                <a href="../session/logout.html" id="#mobile-session" class="col-3 mx-auto my-2">Logout</a>
-                `;
+                cartHtml = query('#view-cart');
+                mobileCartHtml = query('#mobile-view-cart');
 
-                navLinks.innerHTML = `
-                <a href="../course/courses.html" id="courses">Courses<img src="../../assets/images/caret.png" alt="caret" class="caret"></a>
-                <a href="../user/profile.html" id="profile">Profile</a>
-                <a href="../user/view-cart.html" id="view-cart">Cart(${cartCount})</a>
-                <a href="../session/logout.html" id="session">Logout</a>
-                `;
+                cartHtml.innerHTML = `Cart (${cartCount})`;
+                mobileCartHtml.innerHTML = `View Cart (${cartCount})`;
             };
 
             setCartCount();

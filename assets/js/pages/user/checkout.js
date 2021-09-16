@@ -1,6 +1,23 @@
 // API Endpoints
 const CREATE_ORDER = 'https://bluprint-api-sdss.herokuapp.com/api/orders/create-order';
 const CLEAR_CART = 'https://bluprint-api-sdss.herokuapp.com/api/orders/clear-cart';
+  
+const cartData = await viewCart();
+const cartItems = [];
+
+for (let i = 0; i < cartData.length; i++) {
+
+    await fetch(VIEW_COURSE, {
+        method: 'POST',
+        headers: {
+            "Authorization": `Bearer ${token}`,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({id: cartData[i].courseId})
+    })
+    .then(data => data.json())
+    .then(data => cartItems.push(data));
+};
 
 // Checkout
 const checkout = async () => {

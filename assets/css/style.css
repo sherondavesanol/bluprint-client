@@ -69,9 +69,9 @@ input::-webkit-inner-spin-button {
 }
 
 header {
+  padding: 0 1.5rem !important;
   position: relative;
   background-color: white;
-  padding: 0 1.5rem !important;
   height: calc(100vh - 4rem);
   z-index: 0;
 }
@@ -131,6 +131,40 @@ header .hero-text a:hover {
   background-color: #232D95;
 }
 
+#cards {
+  padding: 1.5rem !important;
+  background-color: #DFE8FF;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #1A4FD6;
+}
+
+#cards .card-container {
+  min-height: 25rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#cards .card-container img {
+  width: 10rem;
+  height: auto;
+}
+
+footer {
+  padding: 1.5rem !important;
+  background-color: #232D95;
+  color: white;
+}
+
+footer h3 {
+  font-family: "Overpass", "Arial", sans-serif;
+  font-size: 2rem;
+}
+
+footer img {
+  width: 4rem;
+  height: auto;
+}
+
 #sign-up {
   background: #DFE8FF;
   height: calc(100vh - 4rem);
@@ -143,6 +177,7 @@ header .hero-text a:hover {
   width: calc(100vw - 3rem);
   color: #1A4FD6;
   z-index: 1;
+  overflow: inital;
 }
 
 #sign-up form .form-group {
@@ -942,6 +977,7 @@ header .hero-text a:hover {
   color: #1A4FD6;
   padding: 0 1.5rem !important;
   font-family: "Overpass", "Arial", sans-serif;
+  min-height: 100vh;
 }
 
 #user-view-cart .cart .cart-item {
@@ -1023,6 +1059,7 @@ header .hero-text a:hover {
   color: #1A4FD6;
   padding: 0 1.5rem !important;
   font-family: "Helvetica", "Arial", sans-serif;
+  min-height: 100vh;
 }
 
 #view-profile h1 {
@@ -1269,7 +1306,7 @@ nav .box .nav-links #profile {
 .glass {
   backdrop-filter: blur(7.5px) saturate(180%);
   -webkit-backdrop-filter: blur(7.5px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
   box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
   -webkit-box-shadow: 4px 24px 60px 0 rgba(109, 141, 173, 0.25);
@@ -1287,8 +1324,9 @@ nav .box .nav-links #profile {
   }
   header {
     margin: 0 3.5rem !important;
-    padding: 3rem 0 !important;
+    padding: 3rem 0 2.9rem 0 !important;
     overflow: initial;
+    height: auto;
   }
   header .hero-image .circle {
     width: calc(100% + 3rem);
@@ -1315,6 +1353,19 @@ nav .box .nav-links #profile {
   header .hero-text p {
     font-size: 1.5rem;
     max-width: 80%;
+  }
+  footer {
+    padding: 0 3.5rem !important;
+  }
+  #cards {
+    padding: 3.5rem !important;
+  }
+  #cards .card-container h3 {
+    font-size: 1.25rem;
+  }
+  #cards .card-container img {
+    width: 7.5rem;
+    height: auto;
   }
   #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
@@ -1371,6 +1422,7 @@ nav .box .nav-links #profile {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: calc(100vh - 4rem);
   }
   header .row .hero-text {
     -ms-flex-item-align: center;
@@ -1390,6 +1442,19 @@ nav .box .nav-links #profile {
   }
   header .row .hero-image img {
     height: 20rem;
+  }
+  footer {
+    padding: 0 5rem !important;
+  }
+  #cards {
+    padding: 5rem !important;
+  }
+  #cards .card-container h3 {
+    font-size: 1.25rem;
+  }
+  #cards .card-container img {
+    width: 7.5rem;
+    height: auto;
   }
   #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
@@ -1447,6 +1512,19 @@ nav .box .nav-links #profile {
   header .row .hero-image img {
     height: 25rem;
   }
+  footer {
+    padding: 0 6rem !important;
+  }
+  #cards {
+    padding: 6rem !important;
+  }
+  #cards .card-container h3 {
+    font-size: 1.25rem;
+  }
+  #cards .card-container img {
+    width: 7.5rem;
+    height: auto;
+  }
   #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
     width: 40%;
@@ -1492,6 +1570,19 @@ nav .box .nav-links #profile {
     min-width: calc(100% + 11.5rem);
     min-height: calc(100vh - 4rem);
     right: -11.5rem;
+  }
+  footer {
+    padding: 0 10rem !important;
+  }
+  #cards {
+    padding: 7.5rem 12.5rem !important;
+  }
+  #cards .card-container h3 {
+    font-size: 1.5rem;
+  }
+  #cards .card-container img {
+    width: 8.5rem;
+    height: auto;
   }
   #sign-up form, .login form,
   #admin-create-course form, #admin-edit-course form {
@@ -1539,6 +1630,22 @@ nav .box .nav-links #profile {
   }
   header .row .hero-image img {
     height: 30rem;
+  }
+  footer {
+    padding: 0 15rem !important;
+  }
+  #cards {
+    padding: 10rem 20rem !important;
+  }
+  #cards .card-container {
+    min-height: 27.5rem;
+  }
+  #cards .card-container h3 {
+    font-size: 1.5rem;
+  }
+  #cards .card-container img {
+    width: 10rem;
+    height: auto;
   }
   #admin-dashboard, #admin-view-users,
   #admin-view-user, #admin-view-courses,

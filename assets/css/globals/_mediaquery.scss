@@ -19,8 +19,9 @@
 
     header {
         margin: 0 3.5rem !important;
-        padding: 3rem 0 !important;
+        padding: 3rem 0 2.9rem 0 !important;
         overflow: initial;
+        height: auto;
 
         .hero-image {
 
@@ -53,6 +54,26 @@
             p {
                 font-size: 1.5rem;
                 max-width: 80%;
+            };
+        };
+    };
+
+    footer {
+        padding: 0 3.5rem !important;
+    };
+
+    #cards {
+        padding: 3.5rem !important;
+    
+        .card-container {
+
+            h3 {
+                font-size: 1.25rem;
+            }
+    
+            img {
+                width: 7.5rem;
+                height: auto;
             };
         };
     };
@@ -154,6 +175,7 @@
     header {
         margin: 0 5rem !important;
         display: flex;
+        height: calc(100vh - 4rem);
 
         .row {
 
@@ -180,6 +202,26 @@
                 img {
                     height: 20rem;
                 };
+            };
+        };
+    };
+
+    footer {
+        padding: 0 5rem !important;
+    };
+
+    #cards {
+        padding: 5rem !important;
+    
+        .card-container {
+
+            h3 {
+                font-size: 1.25rem;
+            }
+    
+            img {
+                width: 7.5rem;
+                height: auto;
             };
         };
     };
@@ -273,6 +315,26 @@
         };
     };
 
+    footer {
+        padding: 0 6rem !important;
+    };
+
+    #cards {
+        padding: 6rem !important;
+    
+        .card-container {
+
+            h3 {
+                font-size: 1.25rem;
+            }
+    
+            img {
+                width: 7.5rem;
+                height: auto;
+            };
+        };
+    };
+
     #sign-up, .login, 
     #admin-create-course, #admin-edit-course {
 
@@ -350,6 +412,26 @@
         };
     };
 
+    footer {
+        padding: 0 10rem !important;
+    };
+
+    #cards {
+        padding: 7.5rem 12.5rem !important;
+    
+        .card-container {
+
+            h3 {
+                font-size: 1.5rem;
+            }
+    
+            img {
+                width: 8.5rem;
+                height: auto;
+            };
+        };
+    };
+
     #sign-up, .login, 
     #admin-create-course, #admin-edit-course {
 
@@ -421,6 +503,27 @@
                 img {
                     height: 30rem;
                 };
+            };
+        };
+    };
+
+    footer {
+        padding: 0 15rem !important;
+    };
+
+    #cards {
+        padding: 10rem 20rem !important;
+    
+        .card-container {
+            min-height: 27.5rem;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+    
+            img {
+                width: 10rem;
+                height: auto;
             };
         };
     };
