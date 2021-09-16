@@ -1,6 +1,6 @@
 #sign-up {
     background: $secondary;
-    height: calc(100vh - 4rem);
+    min-height: calc(100vh - 4rem);
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -9,7 +9,7 @@
         width: calc(100vw - 3rem);
         color: $primary;
         z-index: 1;
-        overflow: inital;
+        overflow: initial;
 
         .form-group {
             font-family: $helvetica;
@@ -43,37 +43,40 @@
         };
     };
 
-    .shape-1, .shape-2, .shape-3 {
-        position: absolute;
-        z-index: -1;
-    };
-
-    .shape-1 {
-        width: 25rem;
-        height: auto;
-        transform: rotate(-35deg);
-        top: -8.5rem;
-        right: -10rem;
-        animation: float1 3s ease-in-out infinite;
-    };
-
-    .shape-2 {
-        width: 20rem;
-        height: auto;
-        transform: rotate(-20deg);
-        bottom: -3rem;
-        right: -8rem;
-        animation: float2 3s ease-in-out infinite;
-    };
-
-    .shape-3 {
-        width: 20rem;
-        height: auto;
-        transform: rotate(-30deg);
-        top: 12.5rem;
-        left: -10rem;
-        animation: float3 3s ease-in-out infinite;
-    };
+    .images {
+        
+        .shape-1, .shape-2, .shape-3 {
+            position: absolute;
+            z-index: -1;
+        };
+    
+        .shape-1 {
+            width: 25rem;
+            height: auto;
+            transform: rotate(-35deg);
+            top: -8.5rem;
+            right: -10rem;
+            animation: float1 3s ease-in-out infinite;
+        };
+    
+        .shape-2 {
+            width: 20rem;
+            height: auto;
+            transform: rotate(-20deg);
+            bottom: -3rem;
+            right: -8rem;
+            animation: float2 3s ease-in-out infinite;
+        };
+    
+        .shape-3 {
+            width: 20rem;
+            height: auto;
+            transform: rotate(-30deg);
+            top: 12.5rem;
+            left: -10rem;
+            animation: float3 3s ease-in-out infinite;
+        };
+    }
 };
 
 // Float animations
